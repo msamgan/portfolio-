@@ -1,0 +1,58 @@
+[
+    {
+        "link": "https://react.dev",
+        "logo": {
+            "light": "img/partners/custom/1.png",
+            "dark": "img/partners/light/1.png"
+        }
+    },
+    {
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "logo": {
+            "light": "img/partners/custom/2.png",
+            "dark": "img/partners/light/2.png"
+        }
+    },
+    {
+        "link": "https://www.php.net/",
+        "logo": {
+            "light": "img/partners/custom/3.png",
+            "dark": "img/partners/light/3.png"
+        }
+    },
+    {
+        "link": "https://nodejs.org/en",
+        "logo": {
+            "light": "img/partners/custom/4.png",
+            "dark": "img/partners/light/4.png"
+        }
+    },
+    {
+        "link": "https://laravel.com/",
+        "logo": {
+            "light": "img/partners/custom/5.png",
+            "dark": "img/partners/light/5.png"
+        }
+    },
+    {
+        "link": "https://www.rust-lang.org/",
+        "logo": {
+            "light": "img/partners/custom/6.png",
+            "dark": "img/partners/light/6.png"
+        }
+    },
+    {
+        "link": "https://vuejs.org/",
+        "logo": {
+            "light": "img/partners/custom/7.png",
+            "dark": "img/partners/light/7.png"
+        }
+    },
+    {
+        "link": "https://www.python.org/",
+        "logo": {
+            "light": "img/partners/custom/8.png",
+            "dark": "img/partners/light/8.png"
+        }
+    }
+]

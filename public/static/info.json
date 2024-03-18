@@ -1,0 +1,41 @@
+{
+    "name": "Mohammed Samgan Khan",
+    "address": "Philadelphia, PA",
+    "bio": "Seasoned Software Engineer with 10+ years of experience in supply chain management, logistics, and transportation. Expertise in developing and deploying software solutions, with a proven track with complex applications",
+    "mainSkill": "Software Engineer",
+    "img": "/img/slider/samgan.jpeg",
+    "skills": [
+        {
+            "name": "JavaScript",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='1600' height='1600' viewBox='0 0 48 48'>\n<path fill='#ffd600' d='M6,42V6h36v36H6z'></path><path fill='none' stroke='#000001' stroke-miterlimit='10' stroke-width='3.3' d='M23.783,22.352v9.819 c0,3.764-4.38,4.022-6.283,0.802'></path><path fill='none' stroke='#000001' stroke-miterlimit='10' stroke-width='3.3' d='M34.69,25.343 c-1.739-2.727-5.674-2.345-5.84,0.558c-0.214,3.757,6.768,2.938,6.247,7.107c-0.365,2.92-4.874,3.858-7.193-0.065'></path>\n</svg>",
+            "color": "rgb(247, 80, 35)",
+            "value": 85
+        },
+        {
+            "name": "laravel ",
+            "icon": "<svg height='2500' viewBox='0 -.11376601 49.74245785 51.31690859' width='2418' xmlns='http://www.w3.org/2000/svg'><path d='m49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1 -.402.694l-9.209 5.302v10.509c0 .286-.152.55-.4.694l-19.223 11.066c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1 -.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054l-19.219-11.066a.801.801 0 0 1 -.402-.694v-32.916c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216zm-36.84-31.068v31.068l17.618 10.143v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-21.483l-4.645-2.676-3.363-1.934zm8.81-5.994-8.007 4.609 8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764 4.645-2.674v-20.096l-3.363 1.936-4.646 2.675v20.096zm24.667-23.325-8.006 4.609 8.006 4.609 8.005-4.61zm-.801 10.605-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937zm-18.422 20.561 11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833z' fill='#ff2d20'/></svg>",
+            "color": "rgb(28, 190, 89)",
+            "value": 95
+        },
+        {
+            "name": "node-js ",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1.5 -1.5 36.31 40.92'><defs><linearGradient id='a' x1='271.97' x2='211.1' y1='217.61' y2='341.77' gradientUnits='userSpaceOnUse'><stop offset='.3' stop-color='#3e863d'/><stop offset='.5' stop-color='#55934f'/><stop offset='.8' stop-color='#5aad45'/></linearGradient><linearGradient id='b' x1='186.48' x2='297.35' y1='321.38' y2='239.47' gradientUnits='userSpaceOnUse'><stop offset='.57' stop-color='#3e863d'/><stop offset='.72' stop-color='#619857'/><stop offset='1' stop-color='#76ac64'/></linearGradient><linearGradient id='c' x1='197.05' x2='288.72' y1='279.65' y2='279.65' gradientUnits='userSpaceOnUse'><stop offset='.16' stop-color='#6bbf47'/><stop offset='.38' stop-color='#79b461'/><stop offset='.47' stop-color='#75ac64'/><stop offset='.7' stop-color='#659e5a'/><stop offset='.9' stop-color='#3e863d'/></linearGradient><clipPath id='d'><path d='m239.03 226.6-42.13 24.32a5.08 5.08 0 0 0-2.55 4.4V304c0 1.81.97 3.5 2.55 4.4l42.13 24.34a5.1 5.1 0 0 0 5.1 0l42.12-24.34a5.1 5.1 0 0 0 2.54-4.4v-48.67c0-1.82-.97-3.5-2.55-4.4l-42.12-24.33a5.12 5.12 0 0 0-5.1 0'/></clipPath><clipPath id='e'><path d='M195.4 307.09a5.1 5.1 0 0 0 1.5 1.31l36.14 20.88 6.02 3.46a5.1 5.1 0 0 0 3.93.48l44.44-81.36a5.04 5.04 0 0 0-1.19-.94l-27.58-15.93-14.59-8.4a5.32 5.32 0 0 0-1.32-.52zm0 0'/></clipPath><clipPath id='f'><path d='M241.07 225.95a5.14 5.14 0 0 0-2.04.66l-42 24.24 45.3 82.51c.62-.09 1.24-.3 1.8-.62l42.13-24.34a5.1 5.1 0 0 0 2.46-3.47l-46.18-78.9a5.29 5.29 0 0 0-1.03-.1l-.42.02'/></clipPath></defs><g transform='matrix(.35278 0 0 .35278 -68.56 -79.7)'><g clip-path='url(#d)'><path fill='url(#a)' d='m331.36 246.8-118.71-58.2-60.87 124.18 118.71 58.19zm0 0'/></g><g clip-path='url(#e)'><path fill='url(#b)' d='m144.07 264 83.83 113.46 110.85-81.9-83.83-113.46zm0 0'/></g><g clip-path='url(#f)'><path fill='url(#c)' d='M197.02 225.93v107.43h91.68V225.93zm0 0'/></g></g></svg>\n",
+            "color": "rgb(128, 103, 240)",
+            "value": 75
+        }
+    ],
+    "social": [
+        { "name": "github", "icon": "icon-github-1", "url": "https://github.com/msamgan" },
+        { "name": "twitter", "icon": "icon-twitter-1", "url": "https://twitter.com/msamgank" },
+        {
+            "name": "linkedin",
+            "icon": "icon-linkedin-1",
+            "url": "https://www.linkedin.com/in/mohd-samgan-khan/"
+        }
+    ],
+    "contact": {
+        "address": "Philadelphia, PA",
+        "email": "mail@msamgan.com",
+        "phn": "--"
+    }
+}
