@@ -17,7 +17,7 @@ const CopyRight = ({ brandName }) => {
                                 © {new Date().getFullYear()}
                             </p>
                         </div>
-                        <div className="right wow fadeInRight" data-wow-duration="1s">
+                        {/*<div className="right wow fadeInRight" data-wow-duration="1s">
                             <ul>
                                 <li>
                                     <a href="#">{`Terms & Condition`}</a>
@@ -26,7 +26,7 @@ const CopyRight = ({ brandName }) => {
                                     <a href="#">Privacy Policy</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </div>
