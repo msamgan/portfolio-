@@ -57,8 +57,12 @@ const MobileMenu = ({ logo }) => {
                             </a>
                         </li>
                         <li className="download_cv">
-                            <a href="https://msamgan.s3.us-east-2.amazonaws.com/mohammed+samgan+khan.pdf"
-                               target={"_blank"} rel="noreferrer" download="">
+                            <a
+                                href="https://msamgan.s3.us-east-2.amazonaws.com/mohammed+samgan+khan.pdf"
+                                target={"_blank"}
+                                rel="noreferrer"
+                                download=""
+                            >
                                 <span>Download CV</span>
                             </a>
                         </li>

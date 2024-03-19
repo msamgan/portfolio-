@@ -11,9 +11,12 @@ const Skills = ({ dark }) => {
     }, [])
 
     return (
-        <div className="dizme_tm_section" style={{
-            marginTop: "150px"
-        }}>
+        <div
+            className="dizme_tm_section"
+            style={{
+                marginTop: "150px"
+            }}
+        >
             <div className="dizme_tm_skills">
                 <div className="container">
                     <div className="wrapper">
@@ -26,7 +29,9 @@ const Skills = ({ dark }) => {
                                 <span>Engineering is Life</span>
                                 <h3>I Develop Skills Regularly to Keep Me Update</h3>
                                 <p>
-                                    In fast growing technology world, I always try to keep me updated with the latest technology and trends. I always try to learn new things and develop my skills to keep me updated.
+                                    In fast growing technology world, I always try to keep me updated with the
+                                    latest technology and trends. I always try to learn new things and develop
+                                    my skills to keep me updated.
                                 </p>
                             </div>
                             <div className="dodo_progress wow fadeInUp" data-wow-duration="1s">
@@ -57,7 +62,9 @@ const Skills = ({ dark }) => {
                                 style={{
                                     borderRadius: "70px"
                                 }}
-                                src={`img/skills/${dark ? 2 : 'learning_'}.jpg`} alt="image" />
+                                src={`img/skills/${dark ? 2 : "learning_"}.jpg`}
+                                alt="image"
+                            />
                         </div>
                     </div>
                 </div>

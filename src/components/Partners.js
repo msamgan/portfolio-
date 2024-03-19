@@ -25,9 +25,11 @@ const Partners = ({ dark }) => {
                                                 src={img.logo && img.logo[dark ? "dark" : "light"]}
                                                 alt="image"
                                             />
-                                            <a className="dizme_tm_full_link" href={img.link}
-                                               target="_blank"
-                                               rel="noopener noreferrer"
+                                            <a
+                                                className="dizme_tm_full_link"
+                                                href={img.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                             />
                                         </div>
                                     </li>

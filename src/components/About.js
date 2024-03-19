@@ -9,8 +9,7 @@ const About = ({ dark }) => {
                         <div className="left">
                             <div className="image">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src={`img/about/${dark ? 2 : 'station'}.jpg`} alt="image" />
+                                <img src={`img/about/${dark ? 2 : "station"}.jpg`} alt="image" />
                                 <div className="numbers year">
                                     <div className="wrapper">
                                         <h3>

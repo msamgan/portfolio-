@@ -34,8 +34,8 @@ const Service = ({ dark }) => {
                         <span>Services</span>
                         <h3>What I Do for Clients</h3>
                         <p>
-                            I provide a wide range of services to the clients. I am always ready to jump into new projects and
-                            create something new and unique.
+                            I provide a wide range of services to the clients. I am always ready to jump into
+                            new projects and create something new and unique.
                         </p>
                     </div>
                     <div className="service_list">

@@ -12,9 +12,7 @@ const Contact = () => {
                     <div className="dizme_tm_main_title" data-align="center">
                         <span>Contact Me</span>
                         <h3>I Want To Hear From You</h3>
-                        <p>
-                            Please fill out the form on this section to contact with me.
-                        </p>
+                        <p>Please fill out the form on this section to contact with me.</p>
                     </div>
                     <div className="contact_inner">
                         <div className="left wow fadeInLeft" data-wow-duration="1s">
@@ -39,7 +37,9 @@ const Contact = () => {
                                             <div className="short">
                                                 <h3>Email</h3>
                                                 <span>
-                                                    <a href="#">{data.contact.email}</a>
+                                                    <a mailto={data.contact.email} href="#">
+                                                        {data.contact.email}
+                                                    </a>
                                                 </span>
                                             </div>
                                         </div>
