@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { fatchData } from "../utilits"
+
 const Contact = () => {
     const [data, setData] = useState({})
     useEffect(async () => {
@@ -37,7 +38,7 @@ const Contact = () => {
                                             <div className="short">
                                                 <h3>Email</h3>
                                                 <span>
-                                                    <a mailto={data.contact.email} href="#">
+                                                    <a href={"mailto:" + data.contact.email}>
                                                         {data.contact.email}
                                                     </a>
                                                 </span>
