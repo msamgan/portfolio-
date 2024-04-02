@@ -11,10 +11,12 @@ import Progressbar from "./Progressbar"
 
 const Layout = ({ children, dark }) => {
     const [siteInfo, setSiteInfo] = useState({})
+
     useEffect(async () => {
         setSiteInfo(await fatchData("/static/siteSetting.json"))
         dataImage()
     }, [])
+
     useEffect(() => {
         wowJsAnimation()
         aTagClick()
@@ -22,9 +24,10 @@ const Layout = ({ children, dark }) => {
         window.addEventListener("scroll", stickyNav)
         window.addEventListener("scroll", scrollTop)
     }, [])
+
     return (
         <Fragment>
-            <PreLoader />
+            {/*<PreLoader />*/}
             <ImageView />
             <VideoPopup />
             <div className="dizme_tm_all_wrap" data-magic-cursor="show">
