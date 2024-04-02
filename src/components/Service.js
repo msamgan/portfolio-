@@ -7,8 +7,11 @@ const Service = ({ dark }) => {
     const [data, setData] = useState([])
     const [popupdata, setPopupdata] = useState({})
     const [popup, setPopup] = useState(false)
-    useEffect(async () => {
-        setData(await fatchData("/static/service.json"))
+    useEffect(() => {
+        fetch("/static/service.json")
+            .then((res) => res.json())
+            .then((data) => setData(data))
+
         setTimeout(() => {
             let VanillaTilt = require("vanilla-tilt")
             VanillaTilt.init(document.querySelectorAll(".tilt-effect"), {

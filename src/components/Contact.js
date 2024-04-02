@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import { fatchData } from "../utilits"
 
 const Contact = () => {
     const [data, setData] = useState({})
-    useEffect(async () => {
-        setData(await fatchData("/static/info.json"))
+    useEffect(() => {
+        fetch("/static/info.json")
+            .then((res) => res.json())
+            .then((data) => setData(data))
     }, [])
     return (
         <div className="dizme_tm_section" id="contact">

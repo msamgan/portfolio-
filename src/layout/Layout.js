@@ -2,18 +2,19 @@ import { Fragment, useEffect, useState } from "react"
 import CopyRight from "../components/CopyRight"
 import ImageView from "../components/popup/ImageView"
 import VideoPopup from "../components/popup/VideoPopup"
-import { aTagClick, dataImage, fatchData, scrollTop, scroll_, stickyNav, wowJsAnimation } from "../utilits"
+import { aTagClick, dataImage, scroll_, scrollTop, stickyNav, wowJsAnimation } from "../utilits"
 import Cursor from "./Cursor"
 import Header from "./Header"
 import MobileMenu from "./MobileMenu"
-import PreLoader from "./PreLoader"
 import Progressbar from "./Progressbar"
 
 const Layout = ({ children, dark }) => {
     const [siteInfo, setSiteInfo] = useState({})
 
-    useEffect(async () => {
-        setSiteInfo(await fatchData("/static/siteSetting.json"))
+    useEffect(() => {
+        fetch("/static/siteSetting.json")
+            .then((res) => res.json())
+            .then((data) => setSiteInfo(data))
         dataImage()
     }, [])
 
