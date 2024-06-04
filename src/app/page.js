@@ -35,7 +35,7 @@ const FxBanner = () => {
                             target={"_blank"}
                             className="float-end hover:text-orange-700"
                         >
-                            Get Started
+                            Know More
                         </a>
                     </div>
                 </div>
