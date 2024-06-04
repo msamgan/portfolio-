@@ -47,6 +47,7 @@ const FxBanner = () => {
 export default function Home() {
     return (
         <div className="">
+            <title>Home - msamgan.com</title>
             <Image src={data.intro.img} alt={data.name} width={150} height={150} className="rounded-full" />
             <h1 className="text-xl mt-4 font-light text-gray-900">{data.name}</h1>
             <div>

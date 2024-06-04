@@ -14,6 +14,7 @@ export const ExternalLink = ({ href, title }) => {
 export default function Services() {
     return (
         <div className="">
+            <title>Projects - msamgan.com</title>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
                 {data.projects.map((project, index) => {
                     return (

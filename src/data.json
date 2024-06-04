@@ -108,5 +108,10 @@
             "link": "https://marketplace.visualstudio.com/items?itemName=msamgan.laravel-pint-vscode#review-details",
             "repo": "https://github.com/3rd-planet/vscode-larapint"
         }
-    ]
+    ],
+    "contact": {
+        "email": "mail@msamgan.com",
+        "phone": "--",
+        "address": "PA, USA"
+    }
 }
