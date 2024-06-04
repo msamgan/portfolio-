@@ -5,7 +5,7 @@ import data from "../../data.json"
 
 export const ExternalLink = ({ href, title }) => {
     return (
-        <a rel="noopener noreferrer" href={href} target="_blank" className="text-blue-500 hover:text-blue-600">
+        <a rel="noopener noreferrer" href={href} target="_blank" className="text-orange-600 hover:text-orange-700">
             {title}
         </a>
     )

@@ -19,7 +19,7 @@ export const NavLink = ({ href, title, path }) => {
                         clipRule="evenodd"
                     />
                 </svg>
-                <Link href={href} className="block">
+                <Link href={href} className="block text-orange-600">
                     {title}
                 </Link>
             </div>
@@ -27,7 +27,7 @@ export const NavLink = ({ href, title, path }) => {
     }
 
     return (
-        <Link href={href} className="block">
+        <Link href={href} className="block hover:text-orange-600">
             {title}
         </Link>
     )
@@ -35,7 +35,7 @@ export const NavLink = ({ href, title, path }) => {
 
 export const ExternalLink = ({ href, title }) => {
     return (
-        <a href={href} className="block" target="_blank" rel="noreferrer noopener">
+        <a href={href} className="block hover:text-orange-600" target="_blank" rel="noreferrer noopener">
             {title}
         </a>
     )
