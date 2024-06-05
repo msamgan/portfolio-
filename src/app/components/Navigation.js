@@ -4,7 +4,10 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 export const NavLink = ({ href, title, path }) => {
-    if (path === href) {
+    let pathFragment = path.split("/").filter((fragment) => fragment !== "")
+    let hrefWithoutSlash = href.slice(1)
+
+    if (pathFragment.includes(hrefWithoutSlash)) {
         return (
             <div className="flex items-center space-x-2">
                 <svg

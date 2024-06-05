@@ -41,8 +41,8 @@ export default function RootLayout({ children }) {
                 </main>
 
                 <footer className="flex flex-col items-center justify-center py-8 text-gray-500">
-                    <Image src="/msamgan_logo.png" alt="msamgan.com" width={300} height={300} />
-                    <p className="font-light" style={{marginTop: "-25px"}}>
+                    {/* <Image src="/msamgan_logo.png" alt="msamgan.com" width={300} height={300} /> */}
+                    <p className="font-light" style={{ marginTop: "-25px" }}>
                         &copy; {new Date().getFullYear()} {data.username}
                     </p>
                 </footer>

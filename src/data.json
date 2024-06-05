@@ -8,6 +8,11 @@
             " My proficiency spans various programming languages and frameworks, enabling me to adapt to diverse project needs. With a strong focus on quality and performance, I have a proven ability to solve challenging problems and drive projects to successful completion, contributing to the achievement of business goals."
         ]
     },
+    "contact": {
+        "email": "mail@msamgan.com",
+        "phone": "--",
+        "address": "PA, USA"
+    },
     "navigation": {
         "pages": [
             {
@@ -32,8 +37,8 @@
             },
             {
                 "name": "Tools",
-                "link": "https://fakem.info",
-                "external": true
+                "link": "/tools",
+                "external": false
             }
         ],
         "social": [
@@ -109,9 +114,42 @@
             "repo": "https://github.com/3rd-planet/vscode-larapint"
         }
     ],
-    "contact": {
-        "email": "mail@msamgan.com",
-        "phone": "--",
-        "address": "PA, USA"
-    }
+    "tools": [
+        {
+            "name": "User Generator",
+            "description": "User Generator is a free online tool that lets you generate random user data with ease.",
+            "img": "/UserGenerator.png",
+            "link": "/tools/user-generator"
+        },
+        {
+            "name": "Content Generator",
+            "description": "Content Generator is a free online tool that lets you generate random content with ease.",
+            "img": "/ContentGenerator.png",
+            "link": "/tools/content-generator"
+        },
+        {
+            "name": "JSON Formatter",
+            "description": "JSON Formatter is a free online tool that lets you format JSON data with ease.",
+            "img": "/JSONFormatter.png",
+            "link": "/tools/json-formatter"
+        },
+        {
+            "name": "Character Counter",
+            "description": "Character Counter is a free online tool that lets you count the number of characters, words, and sentences in your text.",
+            "img": "/CharacterCounter.png",
+            "link": "/tools/character-counter"
+        },
+        {
+            "name": "Diff Checker",
+            "description": "Diff Checker is a free online tool that lets you compare text and find the differences between them.",
+            "img": "/DiffChecker.png",
+            "link": "/tools/diff-checker"
+        },
+        {
+            "name": "HTML to Markdown",
+            "description": "HTML to Markdown is a free online tool that lets you convert HTML to Markdown with ease.",
+            "img": "/HTMLtoMarkdown.png",
+            "link": "/tools/html-to-markdown"
+        }
+    ]
 }

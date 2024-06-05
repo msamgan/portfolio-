@@ -1,4 +1,5 @@
 "use client"
+
 import data from "../../data.json"
 
 export default function Contact() {
