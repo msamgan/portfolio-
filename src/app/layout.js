@@ -46,6 +46,13 @@ export default function RootLayout({ children }) {
                         &copy; {new Date().getFullYear()} {data.username}
                     </p>
                 </footer>
+
+                {/* {
+                    "name": "JSON Formatter",
+                    "description": "JSON Formatter is a free online tool that lets you format JSON data with ease.",
+                    "img": "/JSONFormatter.png",
+                    "link": "/tools/json-formatter"
+                }, */}
             </body>
         </html>
     )

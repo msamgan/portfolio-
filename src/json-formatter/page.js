@@ -30,7 +30,7 @@ const JsonFormatter = () => {
                             onChange={(event) => {
                                 try {
                                     setInputString(JSON.parse(event.target.value))
-                                    setError("")
+                                    setError(e.message)
                                 } catch (e) {
                                     setInputString("")
                                     setError(e.message)

@@ -128,12 +128,6 @@
             "link": "/tools/content-generator"
         },
         {
-            "name": "JSON Formatter",
-            "description": "JSON Formatter is a free online tool that lets you format JSON data with ease.",
-            "img": "/JSONFormatter.png",
-            "link": "/tools/json-formatter"
-        },
-        {
             "name": "Character Counter",
             "description": "Character Counter is a free online tool that lets you count the number of characters, words, and sentences in your text.",
             "img": "/CharacterCounter.png",
