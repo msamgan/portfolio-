@@ -25,7 +25,8 @@ const JsonFormatter = () => {
             lname: lastName,
             name: `${firstName} ${lastName}`,
             username: `${firstName?.toLowerCase()}${lastName?.toLowerCase()}`,
-            email: `${firstName?.toLowerCase()}.${lastName?.toLowerCase()}@dispostable.com`
+            email: `${firstName?.toLowerCase()}.${lastName?.toLowerCase()}@dispostable.com`,
+            phone: faker.phone.number("+1 ### ### ####")
         })
 
         setInboxUrl(`https://www.dispostable.com/inbox/${firstName?.toLowerCase()}.${lastName?.toLowerCase()}`)
