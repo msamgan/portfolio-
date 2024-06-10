@@ -11,14 +11,14 @@
     "contact": {
         "email": "mail@msamgan.com",
         "phone": "--",
-        "address": "PA, USA"
+        "address": "Philadelphia (PA), USA"
     },
     "navigation": {
         "pages": [
             {
                 "name": "Posts",
-                "link": "https://codebysamgan.com",
-                "external": true
+                "link": "/posts",
+                "external": false
             },
             {
                 "name": "Services",
@@ -39,6 +39,11 @@
                 "name": "Tools",
                 "link": "/tools",
                 "external": false
+            },
+            {
+                "name": "Resume",
+                "link": "https://msamgan.s3.us-east-2.amazonaws.com/mohammed+samgan+khan.pdf",
+                "external": true
             }
         ],
         "social": [

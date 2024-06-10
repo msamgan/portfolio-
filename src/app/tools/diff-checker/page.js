@@ -28,7 +28,7 @@ const DiffChecker = () => {
                             Original Text
                         </label>
                         <textarea
-                            className="w-full border border-gray-300 rounded-md font-light p-4 mt-2"
+                            className="w-full p-4 mt-2 font-light border border-gray-300 rounded-md"
                             withspellcheck="false"
                             rows={10}
                             id="originalText"

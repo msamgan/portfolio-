@@ -4,6 +4,7 @@ import data from "../data.json"
 import Link from "next/link"
 import Navigation from "./components/Navigation"
 import Image from "next/image"
+import Loading from "./loading"
 
 const alexandria = Alexandria({ subsets: ["latin"] })
 
@@ -16,8 +17,8 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={alexandria.className}>
-                <main className="max-w-screen-lg mx-auto p-4 mt-8">
-                    <header className="flex items-center space-x-4 mb-8">
+                <main className="max-w-screen-lg p-4 mx-auto mt-8">
+                    <header className="flex items-center mb-8 space-x-4">
                         <img
                             src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"
                             alt={data.name}
@@ -31,12 +32,12 @@ export default function RootLayout({ children }) {
                         </div>
                     </header>
 
-                    <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-24">
+                    <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-24 ">
                         <div className="space-y-4 text-gray-700">
                             <Navigation data={data} />
                         </div>
 
-                        {children}
+                        <div fallback={<Loading />}>{children}</div>
                     </div>
                 </main>
 

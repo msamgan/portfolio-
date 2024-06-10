@@ -25,7 +25,7 @@ export default function Services() {
                     return (
                         <div
                             key={index}
-                            className="p-4 shadow-xl bg-gray-50 text-gray-800 rounded-md hover:shadow-2xl"
+                            className="p-4 text-gray-800 shadow-xl bg-gray-50 rounded-md hover:shadow-2xl"
                         >
                             <div className="space-y-8">
                                 <div className="space-y-3">
@@ -34,14 +34,14 @@ export default function Services() {
                                         alt={project.name}
                                         width={400}
                                         height={300}
-                                        className="block object-cover object-center w-58 h-48 rounded-md"
+                                        className="block object-cover object-center h-48 w-58 rounded-md"
                                     />
                                 </div>
                                 <div className="space-y-3">
                                     <a rel="noopener noreferrer" href="#" className="block">
                                         <h3 className="text-lg text-gray-900">{project.name}</h3>
                                     </a>
-                                    <p className="font-light leading-7 text-gray-700">{project.description}</p>
+                                    <p className="font-light text-gray-700 leading-7">{project.description}</p>
                                 </div>
 
                                 <div className="flex items-center justify-between">

@@ -37,7 +37,7 @@ const HtmlToMarkdown = () => {
                             Enter HTML
                         </label>
                         <textarea
-                            className="w-full border border-gray-300 rounded-md font-light p-4 mt-2"
+                            className="w-full p-4 mt-2 font-light border border-gray-300 rounded-md"
                             id="htmlValue"
                             onChange={(event) => {
                                 setHtml("")
@@ -56,7 +56,7 @@ const HtmlToMarkdown = () => {
                             Markdown
                         </label>
                         <textarea
-                            className="w-full border border-gray-300 rounded-md font-light p-4 mt-2"
+                            className="w-full p-4 mt-2 font-light border border-gray-300 rounded-md"
                             id="markdownValue"
                             rows={18}
                             readOnly

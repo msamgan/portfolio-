@@ -16,7 +16,7 @@ const Tools = () => {
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
                 <div>
-                    <fieldset className="w-full space-y-1 text-gray-800">
+                    <fieldset className="w-full text-gray-800 space-y-1">
                         <label htmlFor="Search" className="hidden">
                             Search
                         </label>
@@ -48,7 +48,7 @@ const Tools = () => {
 
                                     setToolList(filtered)
                                 }}
-                                className="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-gray-100 text-gray-800 focus:bg-gray-50 focus:border-cyan-600"
+                                className="w-32 py-2 pl-10 text-sm text-gray-800 bg-gray-100 rounded-md sm:w-auto focus:outline-none focus:bg-gray-50 focus:border-cyan-600"
                             />
                         </div>
                     </fieldset>
@@ -59,9 +59,9 @@ const Tools = () => {
                         <Link rel="noopener noreferrer" href={tool.link} className="block">
                             <div
                                 key={index}
-                                className="p-4 shadow-xl bg-gray-50 text-gray-800 rounded-md hover:shadow-2xl"
+                                className="p-4 text-gray-800 shadow-xl bg-gray-50 rounded-md hover:shadow-2xl"
                             >
-                                <div className="flex gap-4 items-center">
+                                <div className="flex items-center gap-4">
                                     <div className="space-y-3">
                                         <Image
                                             src={tool.img}
@@ -73,7 +73,7 @@ const Tools = () => {
                                     </div>
                                     <div className="space-y-3">
                                         <h3 className="text-lg text-gray-900">{tool.name}</h3>
-                                        <p className="font-light leading-7 text-gray-700">{tool.description}</p>
+                                        <p className="font-light text-gray-700 leading-7">{tool.description}</p>
                                     </div>
                                 </div>
                             </div>

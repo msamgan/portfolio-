@@ -1,0 +1,118 @@
+h2,
+h3 {
+    @apply text-2xl font-light;
+    margin-bottom: 12px;
+}
+
+.post p {
+    @apply text-lg font-light;
+    margin-bottom: 0.6em;
+}
+
+.post a {
+    color: #ea580b;
+}
+
+.post a:hover {
+    color: #c94509;
+    text-decoration: none !important;
+}
+
+.post li {
+    list-style: disc;
+    margin-bottom: 0.5em;
+    margin-left: 1.5em;
+}
+
+.post ul {
+    margin-bottom: 1.5em;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: black;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+blockquote {
+    background: linear-gradient(45deg, #eddbff, transparent);
+    color: rebeccapurple;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1.6em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.6em;
+    width: 100%;
+    overflow: auto;
+    display: block;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+    border-left: 3px solid #f36d33;
+}
+
+table th,
+table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+table th {
+    font-weight: 600;
+}
+
+table td {
+    font-weight: 400;
+}
+
+table tr:nth-child(1) {
+    font-weight: 900;
+    font-size: 18px;
+    color: #24292e;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+.sharethis-sticky-share-buttons .st-btn {
+    display: flex !important;
+}
+
+.embedded_image img {
+    border-radius: 8px;
+}
+
+blockquote {
+    border-left: 3px solid #f36d33;
+    background: linear-gradient(45deg, #ffe6db, transparent);
+    color: #282828;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1.6em;
+    font-size: 22px;
+}

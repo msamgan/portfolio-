@@ -23,7 +23,7 @@ const JsonFormatter = () => {
                 <div className={"mt-3"}>
                     <div className={"col-md-12"}>
                         <textarea
-                            className="w-full border border-gray-300 rounded-md font-light p-4"
+                            className="w-full p-4 font-light border border-gray-300 rounded-md"
                             rows={10}
                             id="jsonValue"
                             autoFocus={true}
@@ -37,7 +37,7 @@ const JsonFormatter = () => {
                                 }
                             }}
                         />
-                        <small id="" className="form-text text-muted text-red-500">
+                        <small id="" className="text-red-500 form-text text-muted">
                             {error}
                         </small>
                     </div>

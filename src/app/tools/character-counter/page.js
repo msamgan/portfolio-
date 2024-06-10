@@ -47,7 +47,7 @@ const CharacterCounter = () => {
                 </p>
                 <div className={"mt-3"}>
                     <textarea
-                        className="w-full border border-gray-300 rounded-md font-light p-4"
+                        className="w-full p-4 font-light border border-gray-300 rounded-md"
                         rows={10}
                         id="inputText"
                         onChange={(e) => setText(e.target.value)}
@@ -55,7 +55,7 @@ const CharacterCounter = () => {
                     />
                 </div>
                 <div className={"mt-3"}>
-                    <label htmlFor="outputText" className="form-label font-light">
+                    <label htmlFor="outputText" className="font-light form-label">
                         <span className="">Characters:</span> {characters}
                         <span className="ml-2">Words</span>: {words}
                         <span className="ml-2">Sentences</span>: {sentences},
