@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import TurndownService from "turndown"
 
 const HtmlToMarkdown = () => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     var turndownService = new TurndownService()
 
     const [html, setHtml] = useState("")
@@ -24,7 +25,7 @@ const HtmlToMarkdown = () => {
         if (html) {
             setMarkdown(turndownService.turndown(html))
         }
-    }, [html])
+    }, [html, turndownService])
 
     return (
         <>

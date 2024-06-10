@@ -17,11 +17,13 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={alexandria.className}>
-                <main className="p-4 mx-auto mt-8 max-w-screen-lg">
+                <main className="max-w-screen-lg p-4 mx-auto mt-8">
                     <header className="flex items-center mb-8 space-x-4">
-                        <img
+                        <Image
                             src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"
                             alt={data.name}
+                            width={80}
+                            height={80}
                             className="w-12 h-12 rounded-full"
                         />
                         <div>
@@ -33,7 +35,7 @@ export default function RootLayout({ children }) {
                     </header>
 
                     <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-24 ">
-                        <div className="text-gray-700 space-y-4">
+                        <div className="space-y-4 text-gray-700">
                             <Navigation data={data} />
                         </div>
 

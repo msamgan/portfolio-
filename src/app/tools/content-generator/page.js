@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import { faker } from "@faker-js/faker"
 
 const JsonFormatter = () => {
@@ -32,13 +32,13 @@ const JsonFormatter = () => {
         setContent(contentArray)
     }
 
-    const generateContent = () => {
+    const generateContent = useCallback(() => {
         makeSentenceClickToCopy(faker.lorem.sentences(10))
-    }
+    }, [])
 
     useEffect(() => {
         generateContent()
-    }, [])
+    }, [generateContent])
 
     return (
         <>

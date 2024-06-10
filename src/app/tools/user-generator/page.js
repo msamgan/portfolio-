@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import { faker } from "@faker-js/faker"
 
 const JsonFormatter = () => {
@@ -10,14 +10,14 @@ const JsonFormatter = () => {
     const [inboxUrl, setInboxUrl] = useState("")
     const [notification, setNotification] = useState("")
 
-    const generateUser = () => {
+    const generateUser = useCallback(() => {
         setFirstName(faker.person.firstName())
         setLastName(faker.person.lastName())
-    }
+    }, [])
 
     useEffect(() => {
         generateUser()
-    }, [])
+    }, [generateUser])
 
     useEffect(() => {
         setUser({
@@ -26,11 +26,11 @@ const JsonFormatter = () => {
             name: `${firstName} ${lastName}`,
             username: `${firstName?.toLowerCase()}${lastName?.toLowerCase()}`,
             email: `${firstName?.toLowerCase()}.${lastName?.toLowerCase()}@dispostable.com`,
-            phone: faker.phone.number("+1 ### ### ####")
+            phone: faker.string.numeric("##########")
         })
 
         setInboxUrl(`https://www.dispostable.com/inbox/${firstName?.toLowerCase()}.${lastName?.toLowerCase()}`)
-    }, [lastName])
+    }, [firstName, lastName])
 
     return (
         <>

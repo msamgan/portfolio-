@@ -4,7 +4,7 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
     return (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
             <div>
-                <fieldset className="w-full text-gray-800 space-y-2">
+                <fieldset className="w-full space-y-2 text-gray-800">
                     <label htmlFor="Search" className="hidden">
                         Search
                     </label>
@@ -43,13 +43,12 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
 
             {filteredPostList.map((post, index) => {
                 return (
-                    <Link key={index} rel="noopener noreferrer" href={"/" + post.slug} className="block">
-                        <div
-                            key={index}
-                            className="p-4 text-gray-800 shadow-xl rounded-md bg-gray-50 hover:shadow-2xl"
-                        >
-                            <div className="flex flex-col gap-4">
-                                {/* <div className="space-y-3">
+                    <div
+                        key={index}
+                        className="p-4 text-gray-800 rounded-md shadow-xl bg-gray-50 hover:shadow-2xl"
+                    >
+                        <div className="flex flex-col gap-4">
+                            {/* <div className="space-y-3">
                                             {post.featured_image && (
                                                 <Image
                                                     src={post.featured_image}
@@ -63,7 +62,13 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                                                 />
                                             )}
                                         </div> */}
-                                <div className="gap-4 space-y-2">
+                            <div className="gap-4 space-y-2">
+                                <Link
+                                    key={index}
+                                    rel="noopener noreferrer"
+                                    href={"/" + post.slug}
+                                    className="block"
+                                >
                                     <div className="flex flex-row justify-between gap-10">
                                         <h3 className="w-3/4 text-lg font-light text-gray-900 ">
                                             {post.title}
@@ -72,27 +77,27 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                                             {new Date(post.published_at).toDateString()}
                                         </p>
                                     </div>
-                                    {/* <p className="font-light text-gray-700 leading-7">
+                                </Link>
+                                {/* <p className="font-light leading-7 text-gray-700">
                                                 {post.excerpt.slice(0, 160)}
                                             </p> */}
-                                    <div className="flex flex-wrap gap-2">
-                                        {post.tags.map((tag, index) => {
-                                            return (
-                                                <Link key={index} href={"/tag/" + tag.slug}>
-                                                    <span
-                                                        key={index}
-                                                        className="px-2 py-1 text-sm font-light text-gray-700 bg-gray-200 rounded-md"
-                                                    >
-                                                        {tag.name}
-                                                    </span>
-                                                </Link>
-                                            )
-                                        })}
-                                    </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {post.tags.map((tag, index) => {
+                                        return (
+                                            <Link key={index} href={"/tag/" + tag.slug}>
+                                                <span
+                                                    key={index}
+                                                    className="px-2 py-1 text-sm font-light text-gray-700 bg-gray-200 rounded-md"
+                                                >
+                                                    {tag.name}
+                                                </span>
+                                            </Link>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 )
             })}
         </div>
