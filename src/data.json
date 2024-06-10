@@ -21,6 +21,11 @@
                 "external": false
             },
             {
+                "name": "Tags",
+                "link": "/tags",
+                "external": false
+            },
+            {
                 "name": "Services",
                 "link": "/services",
                 "external": false

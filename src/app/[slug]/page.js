@@ -6,6 +6,7 @@ import "./post.css"
 import Image from "next/image"
 import Loading from "../loading"
 import Giscus from "@giscus/react"
+import Link from "next/link"
 
 export default function PostDetail(props) {
     const slug = props.params.slug
@@ -31,7 +32,7 @@ export default function PostDetail(props) {
         if (slug) {
             getPost()
         }
-    }, [])
+    }, [getPost, slug])
 
     return (
         <div className="max-w-4xl mx-auto space-y-12 post">
@@ -83,9 +84,11 @@ export default function PostDetail(props) {
                             </h1>
                             <div className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
                                 <div className="flex items-center md:space-x-2">
-                                    <img
+                                    <Image
                                         src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"
                                         alt=""
+                                        width={20}
+                                        height={20}
                                         className="w-4 h-4 bg-gray-500 border border-gray-300 rounded-full"
                                     />
                                     <span className="text-sm">
@@ -110,14 +113,14 @@ export default function PostDetail(props) {
                             <div className="flex flex-wrap gap-2 py-3 font-light border-t border-gray-600 border-dashed">
                                 {post.tags.map((tag, index) => {
                                     return (
-                                        <a
+                                        <Link
                                             key={index}
+                                            href={"/tag/" + tag.slug}
                                             rel="noopener noreferrer"
-                                            href="#"
                                             className="px-3 py-1 text-gray-500 rounded-sm hover:underline"
                                         >
-                                            {tag}
-                                        </a>
+                                            {tag.name}
+                                        </Link>
                                     )
                                 })}
                             </div>
