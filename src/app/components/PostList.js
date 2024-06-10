@@ -4,7 +4,7 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
     return (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
             <div>
-                <fieldset className="w-full space-y-2 text-gray-800">
+                <fieldset className="w-full text-gray-800 space-y-2">
                     <label htmlFor="Search" className="hidden">
                         Search
                     </label>
@@ -46,7 +46,7 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                     <Link key={index} rel="noopener noreferrer" href={"/" + post.slug} className="block">
                         <div
                             key={index}
-                            className="p-4 text-gray-800 rounded-md shadow-xl bg-gray-50 hover:shadow-2xl"
+                            className="p-4 text-gray-800 shadow-xl rounded-md bg-gray-50 hover:shadow-2xl"
                         >
                             <div className="flex flex-col gap-4">
                                 {/* <div className="space-y-3">
@@ -72,7 +72,7 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                                             {new Date(post.published_at).toDateString()}
                                         </p>
                                     </div>
-                                    {/* <p className="font-light leading-7 text-gray-700">
+                                    {/* <p className="font-light text-gray-700 leading-7">
                                                 {post.excerpt.slice(0, 160)}
                                             </p> */}
                                     <div className="flex flex-wrap gap-2">

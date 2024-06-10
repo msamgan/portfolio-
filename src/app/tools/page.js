@@ -56,10 +56,10 @@ const Tools = () => {
 
                 {toolList.map((tool, index) => {
                     return (
-                        <Link rel="noopener noreferrer" href={tool.link} className="block">
+                        <Link key={index} rel="noopener noreferrer" href={tool.link} className="block">
                             <div
                                 key={index}
-                                className="p-4 text-gray-800 shadow-xl bg-gray-50 rounded-md hover:shadow-2xl"
+                                className="p-4 text-gray-800 shadow-xl rounded-md bg-gray-50 hover:shadow-2xl"
                             >
                                 <div className="flex items-center gap-4">
                                     <div className="space-y-3">

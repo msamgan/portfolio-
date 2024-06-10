@@ -7,7 +7,7 @@ export default function Contact() {
         <>
             <title>Contact - msamgan.com</title>
             <section className="text-gray-900 bg-gray-100">
-                <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+                <div className="max-w-6xl px-6 mx-auto grid grid-cols-1 lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 mt-4 md:py-0 md:px-6">
                         <h1 className="text-2xl font-bold">Get in touch</h1>
                         <div className="pt-4 pb-4 space-y-4">

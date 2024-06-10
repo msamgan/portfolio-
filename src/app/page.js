@@ -53,7 +53,7 @@ export default function Home() {
             <div>
                 {data.intro.text.map((text, index) => {
                     return (
-                        <div className="mt-4 text-lg font-light leading-7 text-gray-700" key={index}>
+                        <div className="mt-4 text-lg font-light text-gray-700 leading-7" key={index}>
                             {text}
                         </div>
                     )

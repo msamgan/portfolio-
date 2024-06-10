@@ -65,7 +65,7 @@ export default function PostDetail(props) {
                         </>
                     )}
 
-                    <article className="space-y-8 text-gray-900">
+                    <article className="text-gray-900 space-y-8">
                         <div className="space-y-6">
                             {post.featured_image && (
                                 <Image
@@ -98,7 +98,7 @@ export default function PostDetail(props) {
                                 {/* <p className="flex-shrink-0 mt-3 text-sm md:mt-0">4 min read • 1,570 views</p> */}
                             </div>
                         </div>
-                        <div className="font-light leading-7 text-gray-800">
+                        <div className="font-light text-gray-800 leading-7">
                             {post.content && (
                                 <div
                                     dangerouslySetInnerHTML={{
@@ -110,7 +110,7 @@ export default function PostDetail(props) {
                     </article>
                     <div>
                         {post.tags && (
-                            <div className="flex flex-wrap gap-2 py-3 font-light border-t border-gray-600 border-dashed">
+                            <div className="flex flex-wrap py-3 font-light border-t border-gray-600 border-dashed gap-2">
                                 {post.tags.map((tag, index) => {
                                     return (
                                         <Link
@@ -127,7 +127,7 @@ export default function PostDetail(props) {
                         )}
                         <div className="space-y-2">
                             <h4 className="text-lg font-light">Related posts</h4>
-                            <ul className="ml-4 space-y-1 font-light list-disc">
+                            <ul className="ml-4 font-light list-disc space-y-1">
                                 {post.related_posts &&
                                     post.related_posts.map((related, index) => {
                                         return (
