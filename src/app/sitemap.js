@@ -13,6 +13,18 @@ export const getPosts = async () => {
         })
 }
 
+export const getTags = async () => {
+    return await axios
+        .get("https://erp.msamgan.com/api/tag/list")
+        .then((response) => {
+            return response.data
+        })
+        .catch((error) => {
+            console.error(error)
+            return []
+        })
+}
+
 export default async function sitemap() {
     const baseUrl = "https://msamgan.com"
     let sitemapArray = [
@@ -33,6 +45,18 @@ export default async function sitemap() {
             lastModified: new Date(),
             changeFrequency: "weekly",
             priority: 0.5
+        })
+    })
+
+    // tags
+    let tags = await getTags()
+
+    tags.map((tag) => {
+        sitemapArray.push({
+            url: baseUrl + "/tag/" + tag.slug,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.7
         })
     })
 
