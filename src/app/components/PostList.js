@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function PostList({ postList, filteredPostList, setFilteredPostList }) {
     return (
@@ -16,7 +17,8 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                                     viewBox="0 0 512 512"
                                     className="w-4 h-4 text-gray-800"
                                 >
-                                    <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+                                    <path
+                                        d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
                                 </svg>
                             </button>
                         </span>
@@ -45,49 +47,45 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                 return (
                     <div
                         key={index}
-                        className="p-4 text-gray-800 rounded-md shadow-xl bg-gray-50 hover:shadow-2xl"
+                        className="p-4 text-gray-800 rounded-md shadow-xl bg-gray-50 hover:shadow-2xl max-w-3xl"
                     >
                         <div className="flex flex-col gap-4">
-                            {/* <div className="space-y-3">
-                                            {post.featured_image && (
-                                                <Image
-                                                    src={post.featured_image}
-                                                    alt={post.title}
-                                                    width={1200}
-                                                    height={100}
-                                                    style={{
-                                                        maxHeight: "150px"
-                                                    }}
-                                                    className="block object-cover object-center rounded-md"
-                                                />
-                                            )}
-                                        </div> */}
-                            <div className="gap-4 space-y-2">
+                            <div className="gap-4 space-y-3">
                                 <Link
                                     key={index}
                                     rel="noopener noreferrer"
                                     href={"/" + post.slug}
                                     className="block"
                                 >
-                                    <div className="flex flex-row justify-between gap-10">
-                                        <h3 className="w-3/4 text-lg font-light text-gray-900 ">
+                                    <div className="flex flex-row justify-between items-center gap-1">
+                                        {post.featured_image && (
+                                            <Image
+                                                src={post.featured_image}
+                                                alt={post.title}
+                                                width={1}
+                                                height={1}
+                                                style={{
+                                                    height: "20px",
+                                                    width: "20px"
+                                                }}
+                                                className="block object-cover object-center rounded-full"
+                                            />
+                                        )}
+                                        <h3 className="w-3/4 text-lg font-light text-gray-900">
                                             {post.title}
                                         </h3>
-                                        <p className="mt-2 text-sm font-light text-gray-600">
+                                        <p className="text-sm font-light text-gray-600">
                                             {new Date(post.published_at).toDateString()}
                                         </p>
                                     </div>
                                 </Link>
-                                {/* <p className="font-light leading-7 text-gray-700">
-                                                {post.excerpt.slice(0, 160)}
-                                            </p> */}
                                 <div className="flex flex-wrap gap-2">
                                     {post.tags.map((tag, index) => {
                                         return (
                                             <Link key={index} href={"/tag/" + tag.slug}>
                                                 <span
                                                     key={index}
-                                                    className="px-2 py-1 text-sm font-light text-gray-700 bg-gray-200 rounded-md"
+                                                    className="px-2 py-1 text-sm font-light text-gray-700 bg-gray-100 rounded-md"
                                                 >
                                                     {tag.name}
                                                 </span>
