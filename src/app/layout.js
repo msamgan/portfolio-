@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                     <Link href="/">
                         <h1 className="text-xl">{data.username}</h1>
                     </Link>
-                    <p className="text-sm text-gray-500">Software Developer</p>
+                    <p className="text-sm text-gray-500">{data.title}</p>
                 </div>
             </header>
 
