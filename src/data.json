@@ -54,16 +54,20 @@
         ],
         "social": [
             {
+                "name": "YouTube",
+                "link": "https://www.youtube.com/@codebysamgan"
+            },
+            {
+                "name": "GitHub",
+                "link": "https://github.com/msamgan"
+            },
+            {
                 "name": "Twitter",
                 "link": "https://twitter.com/msamgank"
             },
             {
                 "name": "LinkedIn",
                 "link": "https://www.linkedin.com/in/mohd-samgan-khan/"
-            },
-            {
-                "name": "GitHub",
-                "link": "https://github.com/msamgan"
             }
         ]
     },
