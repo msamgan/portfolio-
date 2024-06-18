@@ -4,16 +4,27 @@ import Image from "next/image"
 import data from "../../data.json"
 import { useState } from "react"
 import Link from "next/link"
+import { titleGenerator } from "@/methods"
 
 const Tools = () => {
     const [toolList, setToolList] = useState(data.tools)
 
+    const description = "A collection of tools to help you with your projects."
+    const keywords = "tools, collection, projects"
+
+    const meta = {
+        title: titleGenerator("Tools"),
+        description: description,
+        keywords: keywords
+    }
+
     return (
         <div className="">
-            <title>Tools - msamgan.com</title>
-            <meta name="description" content="A collection of tools to help you with your projects." />
-            <meta name="keywords" content="tools, collection, projects" />
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
 
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Tools</h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
                 <div>
                     <fieldset className="w-full text-gray-800 space-y-1">
@@ -48,7 +59,7 @@ const Tools = () => {
 
                                     setToolList(filtered)
                                 }}
-                                className="w-32 py-2 pl-10 text-sm text-gray-800 bg-gray-100 rounded-md sm:w-auto focus:outline-none focus:bg-gray-50 focus:border-cyan-600"
+                                className="w-full py-2 pl-10 text-sm text-gray-800 bg-gray-100 rounded-md sm:w-full focus:outline-none focus:bg-gray-50 focus:border-cyan-600"
                             />
                         </div>
                     </fieldset>

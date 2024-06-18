@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
                 />
                 <div>
                     <Link href="/">
-                        <h1 className="text-xl">{data.username}</h1>
+                        <div className="text-xl">{data.username}</div>
                     </Link>
                     <p className="text-sm text-gray-500">{data.title}</p>
                 </div>

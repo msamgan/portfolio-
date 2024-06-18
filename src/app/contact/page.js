@@ -1,15 +1,29 @@
 "use client"
 
 import data from "../../data.json"
+import { titleGenerator } from "@/methods"
 
 export default function Contact() {
+
+    const description = "Get in touch with me for any queries, feedback or just to say hi. I am always open to new opportunities and collaborations."
+    const tags = "contact, email, address, phone, get in touch, feedback, queries, collaborations, opportunities"
+
+    const meta = {
+        title: titleGenerator("Contact"),
+        description: description,
+        tags: tags
+    }
+
     return (
         <>
-            <title>Contact - msamgan.com</title>
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.tags} />
+
             <section className="text-gray-900 bg-gray-100">
                 <div className="max-w-6xl px-6 mx-auto grid grid-cols-1 lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 mt-4 md:py-0 md:px-6">
-                        <h1 className="text-2xl font-bold">Get in touch</h1>
+                        <h1 className="text-3xl font-bold">Get in touch</h1>
                         <div className="pt-4 pb-4 space-y-4">
                             <p className="flex items-center">
                                 <svg
@@ -44,7 +58,8 @@ export default function Contact() {
                                     fill="currentColor"
                                     className="w-5 h-5 mr-2 sm:mr-6"
                                 >
-                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path
+                                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                                 </svg>
                                 <span className="font-light">{data.contact.email}</span>

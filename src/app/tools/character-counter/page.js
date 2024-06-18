@@ -1,7 +1,8 @@
 "use client"
 
 import { isEmpty } from "lodash"
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+import { titleGenerator } from "@/methods"
 
 /**
  * A React component that displays the character counter.
@@ -27,20 +28,20 @@ const CharacterCounter = () => {
         setParagraphs(text ? text.split("\n").filter((paragraph) => !isEmpty(paragraph)).length : 0)
     }, [text])
 
-    /**
-     * The main component for the character counter.
-     * @returns {JSX.Element} A React component that displays the character counter.
-     */
+
+    const meta = {
+        title: titleGenerator("Character Counter"),
+        description: "Count characters, words, sentences and paragraphs in your text. This is a free tool that counts characters, words, sentences and paragraphs in your text.",
+        keywords: "character, counter, words, sentences, paragraphs"
+    }
+
     return (
         <>
-            <title>Character Counter - msamgan.com</title>
-            <meta
-                name="description"
-                content="Count characters, words, sentences and paragraphs in your text. This is a free tool that counts characters, words, sentences and paragraphs in your text."
-            />
-            <meta name="keywords" content="character, counter, words, sentences, paragraphs" />
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
 
-            <div className={"mb-3 mt-5 min-w-full"}>
+            <div className={"min-w-full"}>
                 <h1 className={"font-light"}># Character Counter</h1>
                 <p className={"mt-2 text-gray-400"}>
                     Count the number of characters, words, sentences, and paragraphs in a string.

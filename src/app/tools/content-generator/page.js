@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react"
 import { faker } from "@faker-js/faker"
+import { titleGenerator } from "@/methods"
 
 const JsonFormatter = () => {
     const [content, setContent] = useState()
@@ -40,16 +41,19 @@ const JsonFormatter = () => {
         generateContent()
     }, [generateContent])
 
+    const meta = {
+        title: titleGenerator("Content Generator"),
+        description: "Generate random data for your projects. This is a free tool that generates random data.",
+        keywords: "user, generator, random"
+    }
+
     return (
         <>
-            <title>Content Generator - msamgan.com</title>
-            <meta
-                name="description"
-                content="Generate random data for your projects. This is a free tool that generates random data."
-            />
-            <meta name="keywords" content="user, generator, random" />
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
 
-            <div className={"mb-3 mt-5 min-w-full"}>
+            <div className={"min-w-full"}>
                 <h1 className={"font-light"}># Content Generator</h1>
                 <p className={"mt-2 text-gray-400"}>Generate random content for your projects.</p>
                 <div className={"mt-3"}>{content}</div>

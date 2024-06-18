@@ -2,6 +2,7 @@
 
 import data from "../data.json"
 import Image from "next/image"
+import { titleGenerator } from "@/methods"
 
 const FxBanner = () => {
     return (
@@ -44,12 +45,22 @@ const FxBanner = () => {
     )
 }
 
+const meta = {
+    title: titleGenerator("Home"),
+    description: "Welcome to msamgan.com. This is the personal website of Muhammad Samgan Khan.",
+    keywords: "mohammad samgan khan, msamgan, msamgan.com, personal website, portfolio, blog"
+}
+
 export default function Home() {
     return (
         <div className="">
-            <title>Home - msamgan.com</title>
+
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
+
             <Image src={data.intro.img} alt={data.name} width={150} height={150} className="rounded-full" />
-            <h1 className="mt-4 text-xl font-light text-gray-900">{data.name}</h1>
+            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4 mt-4"}>{data.name}</h1>
             <div>
                 {data.intro.text.map((text, index) => {
                     return (

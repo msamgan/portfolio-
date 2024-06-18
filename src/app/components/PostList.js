@@ -34,7 +34,7 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
 
                                 setFilteredPostList(filtered)
                             }}
-                            className="w-32 py-2 pl-10 text-sm text-gray-800 bg-gray-100 rounded-md sm:w-auto focus:outline-none focus:bg-gray-50 focus:border-cyan-600"
+                            className="w-full py-2 pl-10 text-sm text-gray-800 bg-gray-100 rounded-md sm:w-full focus:outline-none focus:bg-gray-50 focus:border-cyan-600"
                         />
                     </div>
                     <small className="block text-xs font-light text-gray-600">

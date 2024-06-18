@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react"
 import { faker } from "@faker-js/faker"
+import { titleGenerator } from "@/methods"
 
 const JsonFormatter = () => {
     const [firstName, setFirstName] = useState()
@@ -32,39 +33,45 @@ const JsonFormatter = () => {
         setInboxUrl(`https://www.dispostable.com/inbox/${firstName?.toLowerCase()}.${lastName?.toLowerCase()}`)
     }, [firstName, lastName])
 
+    const description = "Generate random user data for your projects. This is a free tool that generates random user data."
+    const keywords = "user, generator, random"
+
+    const meta = {
+        title: titleGenerator("User Generator"),
+        description: description,
+        keywords: keywords
+    }
+
     return (
         <>
-            <title>User Generator - msamgan.com</title>
-            <meta
-                name="description"
-                content="Generate random user data for your projects. This is a free tool that generates random user data."
-            />
-            <meta name="keywords" content="user, generator, random" />
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
 
-            <div className={"mb-3 mt-5 min-w-full"}>
+            <div className={"min-w-full"}>
                 <h1 className={"font-light"}># User Generator</h1>
                 <p className={"mt-2 text-gray-400"}>Generate random user data for your projects.</p>
                 <div className={"mt-3"}>
                     <table className={"table-auto font-light min-w-full"}>
                         <tbody>
-                            {Object.keys(user).map((key, index) => (
-                                <tr key={index}>
-                                    <td className={"border px-4 py-2"}>{key}</td>
-                                    <td
-                                        onClick={() => {
-                                            navigator.clipboard.writeText(user[key])
-                                            setNotification(`${key} copied to clipboard`)
+                        {Object.keys(user).map((key, index) => (
+                            <tr key={index}>
+                                <td className={"border px-4 py-2"}>{key}</td>
+                                <td
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(user[key])
+                                        setNotification(`${key} copied to clipboard`)
 
-                                            setTimeout(() => {
-                                                setNotification("")
-                                            }, 3000)
-                                        }}
-                                        className={"border px-4 py-2 font-light cursor-pointer"}
-                                    >
-                                        {user[key]}
-                                    </td>
-                                </tr>
-                            ))}
+                                        setTimeout(() => {
+                                            setNotification("")
+                                        }, 3000)
+                                    }}
+                                    className={"border px-4 py-2 font-light cursor-pointer"}
+                                >
+                                    {user[key]}
+                                </td>
+                            </tr>
+                        ))}
                         </tbody>
                     </table>
                     <small className={"text-gray-400"}>{notification}</small>

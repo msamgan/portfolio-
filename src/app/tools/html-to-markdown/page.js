@@ -1,7 +1,8 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import TurndownService from "turndown"
+import { titleGenerator } from "@/methods"
 
 const HtmlToMarkdown = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -11,14 +12,9 @@ const HtmlToMarkdown = () => {
     const [markdown, setMarkdown] = useState("")
 
     const meta = {
-        title: "HTML to Markdown",
+        title: titleGenerator("Html to Markdown"),
         description: "Convert HTML to Markdown. This is a free tool that converts HTML to Markdown.",
-        meta: {
-            charset: "utf-8",
-            name: {
-                keywords: "html, markdown, converter"
-            }
-        }
+        keywords: "html, markdown, converter"
     }
 
     useEffect(() => {
@@ -29,7 +25,12 @@ const HtmlToMarkdown = () => {
 
     return (
         <>
-            <div className={"min-w-full mb-3 mt-5"}>
+
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
+
+            <div className={"min-w-full"}>
                 <h1 className={"font-light"}># Html to Markdown</h1>
                 <p className={"mt-2 text-gray-400"}>Convert html to markdown.</p>
                 <div className={"mt-3 flex gap-3"}>

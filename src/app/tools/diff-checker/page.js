@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import ReactDiffViewer from "react-diff-viewer-continued"
+import { titleGenerator } from "@/methods"
 
 const DiffChecker = () => {
     const [oldCode, setOldCode] = useState()
@@ -9,16 +10,19 @@ const DiffChecker = () => {
     const [newCodeDisable, setNewCodeDisable] = useState(true)
     const [showDiff, setShowDiff] = useState(false)
 
+    const meta  = {
+        title: titleGenerator("Diff Checker"),
+        description: "Compare two text files and see the differences. This is a free tool that compares two files and shows the differences.",
+        keywords: "diff, checker, compare, text"
+    }
+
     return (
         <>
-            <title>Diff Checker - msamgan.com</title>
-            <meta
-                name="description"
-                content="Compare two text files and see the differences. This is a free tool that compares two files and shows the differences."
-            />
-            <meta name="keywords" content="diff, checker, compare, text" />
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
 
-            <div className={"min-w-full max-w-full mb-3 mt-5"}>
+            <div className={"min-w-full max-w-full"}>
                 <h1 className={"font-light"}># Diff Checker</h1>
                 <p className={"mt-2 text-gray-400"}>Difference checker between two file data.</p>
 
