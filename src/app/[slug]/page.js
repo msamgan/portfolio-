@@ -78,7 +78,7 @@ export default function PostDetail(props) {
                                     className="block object-cover object-center rounded-md"
                                 />
                             )}
-                            <h1 className="text-3xl font-bold leading-7 md:tracking-tight md:text-3xl">
+                            <h1 className="text-3xl leading-7 md:tracking-tight md:text-3xl text-gray-700">
                                 {post.title}
                             </h1>
                             <div className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">

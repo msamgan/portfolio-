@@ -41,7 +41,7 @@ export default function Services() {
                                 </div>
                                 <div className="space-y-3">
                                     <a rel="noopener noreferrer" href="#" className="block">
-                                        <h3 className="text-lg text-gray-900">{service.name}</h3>
+                                        <h3 className="text-lg text-bold text-gray-700">{service.name}</h3>
                                     </a>
                                     <p className="font-light text-gray-700 leading-7">{service.description}</p>
                                 </div>
