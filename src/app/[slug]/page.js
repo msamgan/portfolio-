@@ -56,8 +56,7 @@ export default async function PostDetail(props) {
                         <h1 className="text-3xl leading-7 md:tracking-tight md:text-3xl text-gray-700">
                             {post.title}
                         </h1>
-                        <div
-                            className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
+                        <div className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
                             <div className="flex items-center md:space-x-2">
                                 <Image
                                     src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"

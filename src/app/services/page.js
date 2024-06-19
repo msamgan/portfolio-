@@ -1,27 +1,28 @@
-"use client"
-
 import Image from "next/image"
 import data from "../../data.json"
 import { titleGenerator } from "@/methods"
 
-export default function Services() {
-    const description =
-        "Explore msamgan's services and discover how we can help you grow your business. From web development to digital marketing, we offer a wide range of services to meet your needs."
-    const tags =
-        "msamgan, services, web development, digital marketing, seo, content writing, social media marketing"
+const description =
+    "Explore msamgan's services and discover how we can help you grow your business. From web development to digital marketing, we offer a wide range of services to meet your needs."
+const tags =
+    "msamgan, services, web development, digital marketing, seo, content writing, social media marketing"
 
-    const meta = {
+export const metadata = {
+    title: titleGenerator("Services"),
+    description: description,
+    keywords: tags,
+    openGraph: {
         title: titleGenerator("Services"),
         description: description,
-        keywords: tags
+        type: "website",
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
+        url: "https://msamgan.com/services"
     }
+}
 
+export default function Services() {
     return (
         <div className="">
-            <title>{meta.title}</title>
-            <meta name="description" content={meta.description} />
-            <meta name="keywords" content={meta.keywords} />
-
             <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
                 <h1 className={"col-span-2 text-3xl font-bold text-gray-900"}>Services</h1>
                 {data.services.map((service, index) => {

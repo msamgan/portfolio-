@@ -1,26 +1,26 @@
-"use client"
-
 import data from "../../data.json"
 import { titleGenerator } from "@/methods"
 
-export default function Contact() {
-    const description =
-        "Get in touch with me for any queries, feedback or just to say hi. I am always open to new opportunities and collaborations."
-    const tags =
-        "contact, email, address, phone, get in touch, feedback, queries, collaborations, opportunities"
+const description =
+    "Get in touch with me for any queries, feedback or just to say hi. I am always open to new opportunities and collaborations."
+const tags = "contact, email, address, phone, get in touch, feedback, queries, collaborations, opportunities"
 
-    const meta = {
+export const metadata = {
+    title: titleGenerator("Contact"),
+    description: description,
+    tags: tags,
+    openGraph: {
         title: titleGenerator("Contact"),
         description: description,
-        tags: tags
+        type: "website",
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
+        url: "https://msamgan.com/contact"
     }
+}
 
+export default function Contact() {
     return (
         <>
-            <title>{meta.title}</title>
-            <meta name="description" content={meta.description} />
-            <meta name="keywords" content={meta.tags} />
-
             <section className="text-gray-900 bg-gray-100">
                 <div className="max-w-6xl px-6 mx-auto grid grid-cols-1 lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 mt-4 md:py-0 md:px-6">

@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import data from "../../data.json"
 import { titleGenerator } from "@/methods"
@@ -17,25 +15,27 @@ export const ExternalLink = ({ href, title }) => {
     )
 }
 
-export default function Services() {
-    const description =
-        "I have worked on a variety of projects, ranging from web development to machine learning. Here are some of the projects I have worked on."
-    const tags = "Projects, Web Development, Machine Learning, Data Science, Full Stack Development"
+const description =
+    "I have worked on a variety of projects, ranging from web development to machine learning. Here are some of the projects I have worked on."
+const tags = "Projects, Web Development, Machine Learning, Data Science, Full Stack Development"
 
-    const meta = {
+export const metadata = {
+    title: titleGenerator("Projects"),
+    description: description,
+    tags: tags,
+    openGraph: {
         title: titleGenerator("Projects"),
         description: description,
-        tags: tags
+        type: "website",
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
+        url: "https://msamgan.com/projects"
     }
+}
 
+export default function Services() {
     return (
         <div className="">
-            <title>{meta.title}</title>
-            <meta name="description" content={meta.description} />
-            <meta name="keywords" content={meta.tags} />
-
             <h1 className="text-3xl font-bold text-gray-900 mb-4">Projects</h1>
-
             <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
                 {data.projects.map((project, index) => {
                     return (
