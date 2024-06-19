@@ -3,7 +3,8 @@ import data from "../../data.json"
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
 
-const description = "A collection of tools to help you with your projects. Find everything you need to streamline your workflow and boost productivity."
+const description =
+    "A collection of tools to help you with your projects. Find everything you need to streamline your workflow and boost productivity."
 const keywords = "tools, collection, projects"
 
 export const metadata = {
@@ -15,8 +16,8 @@ export const metadata = {
         description: description,
         type: "article",
         url: "https://msamgan.com/tools",
-        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
-    },
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+    }
 }
 
 const Tools = () => {
