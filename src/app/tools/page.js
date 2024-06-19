@@ -1,32 +1,32 @@
-"use client"
-
 import Image from "next/image"
 import data from "../../data.json"
-import { useState } from "react"
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
 
-const Tools = () => {
-    const [toolList, setToolList] = useState(data.tools)
+const description = "A collection of tools to help you with your projects. Find everything you need to streamline your workflow and boost productivity."
+const keywords = "tools, collection, projects"
 
-    const description = "A collection of tools to help you with your projects."
-    const keywords = "tools, collection, projects"
-
-    const meta = {
+export const metadata = {
+    title: titleGenerator("Tools"),
+    description: description,
+    keywords: keywords,
+    openGraph: {
         title: titleGenerator("Tools"),
         description: description,
-        keywords: keywords
-    }
+        type: "article",
+        url: "https://msamgan.com/tools",
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
+    },
+}
+
+const Tools = () => {
+    const toolList = data.tools
 
     return (
         <div className="">
-            <title>{meta.title}</title>
-            <meta name="description" content={meta.description} />
-            <meta name="keywords" content={meta.keywords} />
-
             <h1 className="text-3xl font-bold text-gray-900 mb-4">Tools</h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
-                <div>
+                {/*<div>
                     <fieldset className="w-full text-gray-800 space-y-1">
                         <label htmlFor="Search" className="hidden">
                             Search
@@ -63,26 +63,26 @@ const Tools = () => {
                             />
                         </div>
                     </fieldset>
-                </div>
+                </div>*/}
 
                 {toolList.map((tool, index) => {
                     return (
                         <Link key={index} rel="noopener noreferrer" href={tool.link} className="block">
                             <div
                                 key={index}
-                                className="p-4 text-gray-800 shadow-xl rounded-md bg-gray-50 hover:shadow-2xl"
+                                className="p-1 text-gray-800 shadow-xl rounded-md bg-gray-50 hover:shadow-2xl"
                             >
                                 <div className="flex items-center gap-4">
                                     <div className="space-y-3">
                                         <Image
                                             src={tool.img}
                                             alt={tool.name}
-                                            width={200}
-                                            height={100}
+                                            width={80}
+                                            height={40}
                                             className="block object-cover object-center rounded-md"
                                         />
                                     </div>
-                                    <div className="space-y-3">
+                                    <div className="">
                                         <h3 className="text-lg text-gray-900">{tool.name}</h3>
                                         <p className="font-light text-gray-700 leading-7">{tool.description}</p>
                                     </div>
