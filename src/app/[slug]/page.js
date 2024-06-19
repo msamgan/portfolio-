@@ -100,6 +100,7 @@ export default function PostDetail(props) {
                         <div className="font-light leading-7 text-gray-800">
                             {post.content && (
                                 <div
+                                    className="post-content"
                                     dangerouslySetInnerHTML={{
                                         __html: post.content
                                     }}
