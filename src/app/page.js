@@ -1,5 +1,3 @@
-"use client"
-
 import data from "../data.json"
 import Image from "next/image"
 import { titleGenerator } from "@/methods"
@@ -45,19 +43,22 @@ const FxBanner = () => {
     )
 }
 
-const meta = {
+export const metadata = {
     title: titleGenerator("Home"),
     description: "Welcome to msamgan.com. This is the personal website of Mohammad Samgan Khan.",
-    keywords: "mohammad samgan khan, msamgan, msamgan.com, personal website, portfolio, blog"
+    keywords: "mohammad samgan khan, msamgan, msamgan.com, personal website, portfolio, blog",
+    openGraph: {
+        type: "website",
+        title: titleGenerator("Home"),
+        url: "https://msamgan.com",
+        description: "Welcome to msamgan.com. This is the personal website of Mohammad Samgan Khan.",
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+    }
 }
 
 export default function Home() {
     return (
         <div className="">
-            <title>{meta.title}</title>
-            <meta name="description" content={meta.description} />
-            <meta name="keywords" content={meta.keywords} />
-
             <Image src={data.intro.img} alt={data.name} width={150} height={150} className="rounded-full" />
             <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4 mt-4"}>{data.name}</h1>
             <div>

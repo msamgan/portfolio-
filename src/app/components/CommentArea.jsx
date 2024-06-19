@@ -2,7 +2,7 @@
 
 import Giscus from "@giscus/react"
 
-export default async function CommentArea() {
+export default function CommentArea() {
     return (
         <Giscus
             id="comments"
