@@ -2,6 +2,7 @@ import "./post.css"
 import Image from "next/image"
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
+import CommentArea from "@/app/components/CommentArea"
 
 async function getPost({ slug }) {
     const res = await fetch(`https://erp.msamgan.com/api/post/${slug}`)
@@ -74,7 +75,7 @@ export default async function PostDetail(props) {
                     <div className="font-light leading-7 text-gray-800">
                         {post.content && (
                             <div
-                                className={'post-content'}
+                                className={"post-content"}
                                 dangerouslySetInnerHTML={{
                                     __html: post.content
                                 }}
@@ -118,27 +119,9 @@ export default async function PostDetail(props) {
                                 })}
                         </ul>
                     </div>
-
-                    {/*<div className="mt-6 space-y-2">
-                        <Giscus
-                            id="comments"
-                            src="https://giscus.app/client.js"
-                            repo="msamgan/blog-comments"
-                            repoId="R_kgDOIT1xSg"
-                            category="General"
-                            categoryId="DIC_kwDOIT1xSs4CSMzg"
-                            mapping="title"
-                            strict="0"
-                            reactionsEnabled="1"
-                            emitMetadata="0"
-                            inputPosition="bottom"
-                            theme="light"
-                            lang="en"
-                            crossorigin="anonymous"
-                            loading={"lazy"}
-                            async
-                        ></Giscus>
-                    </div>*/}
+                    <div className="mt-6 space-y-2">
+                        <CommentArea />
+                    </div>
                 </div>
             </>
         </div>
