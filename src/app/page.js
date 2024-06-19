@@ -47,7 +47,7 @@ const FxBanner = () => {
 
 const meta = {
     title: titleGenerator("Home"),
-    description: "Welcome to msamgan.com. This is the personal website of Muhammad Samgan Khan.",
+    description: "Welcome to msamgan.com. This is the personal website of Mohammad Samgan Khan.",
     keywords: "mohammad samgan khan, msamgan, msamgan.com, personal website, portfolio, blog"
 }
 

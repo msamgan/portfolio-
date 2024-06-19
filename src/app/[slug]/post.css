@@ -1,6 +1,10 @@
-h2,
-h3 {
+h2 {
     @apply text-2xl font-light;
+    margin-bottom: 12px;
+}
+
+h3 {
+    @apply text-xl font-light;
     margin-bottom: 12px;
 }
 
@@ -115,4 +119,10 @@ blockquote {
     border-radius: 4px;
     margin-bottom: 1.6em;
     font-size: 22px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 18px;
 }
