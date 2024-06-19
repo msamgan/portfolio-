@@ -14,21 +14,21 @@ export const metadata = {
         type: "article",
         title: titleGenerator("Published Posts"),
         url: "https://msamgan.com/posts",
-        description: description
+        description: description,
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
     }
 }
 
 async function getPostList() {
-    const res = await fetch('https://erp.msamgan.com/api/post/list')
+    const res = await fetch("https://erp.msamgan.com/api/post/list")
     if (!res.ok) {
-        throw new Error('Failed to fetch data')
+        throw new Error("Failed to fetch data")
     }
 
     return res.json()
 }
 
 export default async function Posts() {
-
     const postList = await getPostList()
 
     return (
@@ -38,5 +38,3 @@ export default async function Posts() {
         </div>
     )
 }
-
-

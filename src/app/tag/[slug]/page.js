@@ -7,7 +7,6 @@ const description =
     "Explore msamgan's technical blog featuring insightful programming posts, in-depth code tutorials, and the latest updates in the tech world. based on a tag"
 const tags = "msamgan, blog, technical blog, programming, code, posts"
 
-
 export async function generateMetadata({ params }) {
     const slug = params.slug
     return {
@@ -18,15 +17,16 @@ export async function generateMetadata({ params }) {
             type: "article",
             title: titleGenerator(`Posts with tag: ${slug}`),
             url: "https://msamgan.com/posts",
-            description: description
+            description: description,
+            images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
         }
     }
 }
 
-async function getPostList({slug}) {
+async function getPostList({ slug }) {
     const res = await fetch("https://erp.msamgan.com/api/post/tag/" + slug)
     if (!res.ok) {
-        throw new Error('Failed to fetch data')
+        throw new Error("Failed to fetch data")
     }
 
     return res.json()
@@ -34,7 +34,7 @@ async function getPostList({slug}) {
 
 export default async function Posts(props) {
     const slug = props.params.slug
-    const postList = await getPostList({slug})
+    const postList = await getPostList({ slug })
 
     return (
         <div className="">
