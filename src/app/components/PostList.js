@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function PostList({ postList, filteredPostList, setFilteredPostList }) {
+export default function PostList({ postList }) {
     return (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
             {/*<div>
@@ -71,9 +71,7 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                                                 className="block object-cover object-center rounded-full"
                                             />
                                         )}
-                                        <h3 className="w-3/4 text-lg text-gray-700">
-                                            {post.title}
-                                        </h3>
+                                        <h3 className="w-3/4 text-lg text-gray-700">{post.title}</h3>
                                         <p className="text-sm font-light text-gray-600">
                                             {new Date(post.published_at).toDateString()}
                                         </p>

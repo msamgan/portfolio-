@@ -5,14 +5,15 @@ import data from "../../data.json"
 import { titleGenerator } from "@/methods"
 
 export default function Services() {
-
-    const description = "Explore msamgan's services and discover how we can help you grow your business. From web development to digital marketing, we offer a wide range of services to meet your needs."
-    const tags = "msamgan, services, web development, digital marketing, seo, content writing, social media marketing"
+    const description =
+        "Explore msamgan's services and discover how we can help you grow your business. From web development to digital marketing, we offer a wide range of services to meet your needs."
+    const tags =
+        "msamgan, services, web development, digital marketing, seo, content writing, social media marketing"
 
     const meta = {
         title: titleGenerator("Services"),
         description: description,
-        keywords: tags,
+        keywords: tags
     }
 
     return (

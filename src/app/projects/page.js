@@ -18,8 +18,8 @@ export const ExternalLink = ({ href, title }) => {
 }
 
 export default function Services() {
-
-    const description = "I have worked on a variety of projects, ranging from web development to machine learning. Here are some of the projects I have worked on."
+    const description =
+        "I have worked on a variety of projects, ranging from web development to machine learning. Here are some of the projects I have worked on."
     const tags = "Projects, Web Development, Machine Learning, Data Science, Full Stack Development"
 
     const meta = {

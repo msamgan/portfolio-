@@ -49,10 +49,10 @@ export default function TagsPage() {
                                 className="inline-block px-4 py-2 mb-2 mr-2 text-sm font-light text-gray-600 bg-gray-100 rounded-full"
                                 style={{ fontSize: `${tag.posts_count * 2 + 12}px` }}
                             >
-                            <Link href={"/tag/" + tag.slug} className={"hover:text-orange-600"}>
-                                {tag.name} ({tag.posts_count})
-                            </Link>
-                        </span>
+                                <Link href={"/tag/" + tag.slug} className={"hover:text-orange-600"}>
+                                    {tag.name} ({tag.posts_count})
+                                </Link>
+                            </span>
                         ))}
                     </div>
                 </div>
