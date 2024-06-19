@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function PostList({ postList, filteredPostList, setFilteredPostList }) {
     return (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
-            <div>
+            {/*<div>
                 <fieldset className="w-full space-y-2 text-gray-800">
                     <label htmlFor="Search" className="hidden">
                         Search
@@ -41,9 +41,9 @@ export default function PostList({ postList, filteredPostList, setFilteredPostLi
                         showing {filteredPostList.length} results of {postList.length}
                     </small>
                 </fieldset>
-            </div>
+            </div>*/}
 
-            {filteredPostList.map((post, index) => {
+            {postList.map((post, index) => {
                 return (
                     <div
                         key={index}
