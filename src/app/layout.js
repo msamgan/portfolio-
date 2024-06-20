@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation"
 import Image from "next/image"
 import Loading from "./loading"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import PlausibleProvider from "next-plausible"
 
 const alexandria = Alexandria({ subsets: ["latin"] })
 
@@ -17,6 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                <title></title>
+                <PlausibleProvider domain="msamgan.com" />
+            </head>
             <body className={alexandria.className}>
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
                     <header className="flex items-center mb-8 space-x-4">
