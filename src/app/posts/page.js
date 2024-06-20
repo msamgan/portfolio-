@@ -29,12 +29,14 @@ async function getPostList({ query }) {
 }
 
 export default async function Posts(request) {
-    const query = request.searchParams.query
-
+    const query = request.searchParams.query || ""
     const postList = await getPostList({ query })
+
     return (
         <div className="">
-            <h1 className={"col-span-2 text-3xl font-bold text-gray-900"}>Published Posts</h1>
+            <h1 className={"col-span-2 text-3xl font-bold text-gray-900"}>
+                Published Posts
+            </h1>
             <PostList postList={postList} query={query} />
         </div>
     )

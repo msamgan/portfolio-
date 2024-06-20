@@ -34,7 +34,7 @@ async function getPostList({ slug, query }) {
 
 export default async function Posts(request) {
     const slug = request.params.slug
-    const query = request.searchParams.query
+    const query = request.searchParams.query || ""
 
     const postList = await getPostList({ slug, query })
 
