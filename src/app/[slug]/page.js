@@ -20,7 +20,11 @@ export async function generateMetadata({ params }) {
         title: titleGenerator(post.title),
         description: post.excerpt,
         keywords: post.tags.map((tag) => tag),
+        alternates: {
+            canonical: "https://msamgan.com/" + post.slug
+        },
         openGraph: {
+            authors: ["msamgan"],
             type: "article",
             title: titleGenerator(post.title),
             url: "https://msamgan.com/" + post.slug,

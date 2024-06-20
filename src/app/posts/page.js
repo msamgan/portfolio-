@@ -34,9 +34,7 @@ export default async function Posts(request) {
 
     return (
         <div className="">
-            <h1 className={"col-span-2 text-3xl font-bold text-gray-900"}>
-                Published Posts
-            </h1>
+            <h1 className={"col-span-2 text-3xl font-bold text-gray-900"}>Published Posts</h1>
             <PostList postList={postList} query={query} />
         </div>
     )
