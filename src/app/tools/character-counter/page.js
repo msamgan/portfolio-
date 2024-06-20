@@ -28,10 +28,10 @@ const CharacterCounter = () => {
         setParagraphs(text ? text.split("\n").filter((paragraph) => !isEmpty(paragraph)).length : 0)
     }, [text])
 
-
     const meta = {
         title: titleGenerator("Character Counter"),
-        description: "Count characters, words, sentences and paragraphs in your text. This is a free tool that counts characters, words, sentences and paragraphs in your text.",
+        description:
+            "Count characters, words, sentences and paragraphs in your text. This is a free tool that counts characters, words, sentences and paragraphs in your text.",
         keywords: "character, counter, words, sentences, paragraphs"
     }
 

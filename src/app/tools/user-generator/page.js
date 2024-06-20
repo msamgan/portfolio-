@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import { faker } from "@faker-js/faker"
 import { titleGenerator } from "@/methods"
 
-const JsonFormatter = () => {
+const UserGenerator = () => {
     const [firstName, setFirstName] = useState()
     const [lastName, setLastName] = useState()
     const [user, setUser] = useState({})
@@ -33,7 +33,8 @@ const JsonFormatter = () => {
         setInboxUrl(`https://www.dispostable.com/inbox/${firstName?.toLowerCase()}.${lastName?.toLowerCase()}`)
     }, [firstName, lastName])
 
-    const description = "Generate random user data for your projects. This is a free tool that generates random user data."
+    const description =
+        "Generate random user data for your projects. This is a free tool that generates random user data."
     const keywords = "user, generator, random"
 
     const meta = {
@@ -54,24 +55,24 @@ const JsonFormatter = () => {
                 <div className={"mt-3"}>
                     <table className={"table-auto font-light min-w-full"}>
                         <tbody>
-                        {Object.keys(user).map((key, index) => (
-                            <tr key={index}>
-                                <td className={"border px-4 py-2"}>{key}</td>
-                                <td
-                                    onClick={() => {
-                                        navigator.clipboard.writeText(user[key])
-                                        setNotification(`${key} copied to clipboard`)
+                            {Object.keys(user).map((key, index) => (
+                                <tr key={index}>
+                                    <td className={"border px-4 py-2"}>{key}</td>
+                                    <td
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(user[key])
+                                            setNotification(`${key} copied to clipboard`)
 
-                                        setTimeout(() => {
-                                            setNotification("")
-                                        }, 3000)
-                                    }}
-                                    className={"border px-4 py-2 font-light cursor-pointer"}
-                                >
-                                    {user[key]}
-                                </td>
-                            </tr>
-                        ))}
+                                            setTimeout(() => {
+                                                setNotification("")
+                                            }, 3000)
+                                        }}
+                                        className={"border px-4 py-2 font-light cursor-pointer"}
+                                    >
+                                        {user[key]}
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                     <small className={"text-gray-400"}>{notification}</small>
@@ -93,4 +94,4 @@ const JsonFormatter = () => {
     )
 }
 
-export default JsonFormatter
+export default UserGenerator

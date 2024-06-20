@@ -10,9 +10,10 @@ const DiffChecker = () => {
     const [newCodeDisable, setNewCodeDisable] = useState(true)
     const [showDiff, setShowDiff] = useState(false)
 
-    const meta  = {
+    const meta = {
         title: titleGenerator("Diff Checker"),
-        description: "Compare two text files and see the differences. This is a free tool that compares two files and shows the differences.",
+        description:
+            "Compare two text files and see the differences. This is a free tool that compares two files and shows the differences.",
         keywords: "diff, checker, compare, text"
     }
 

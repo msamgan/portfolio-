@@ -1,62 +1,50 @@
-"use client"
-
-import axios from "axios"
 import Link from "next/link"
-import { useCallback, useEffect, useState } from "react"
-import Loading from "../loading"
 import { titleGenerator } from "@/methods"
 
-export default function TagsPage() {
-    const [tagList, setTagList] = useState([])
-    const [loading, setLoading] = useState(true)
-
-    const getTagList = useCallback(() => {
-        setLoading(true)
-        axios
-            .get("https://erp.msamgan.com/api/tag/list")
-            .then((response) => {
-                setTagList(response.data)
-                setLoading(false)
-            })
-            .catch((error) => {
-                console.error("Error loading tags", error)
-            })
-    }, [])
-
-    useEffect(() => {
-        getTagList()
-    }, [getTagList])
-
-    const meta = {
-        title: titleGenerator("Tags"),
-        description: "Tags list for msamgan.com"
+const getTagList = async () => {
+    const res = await fetch("https://erp.msamgan.com/api/tag/list")
+    if (!res.ok) {
+        throw new Error("Failed to fetch data")
     }
+
+    return res.json()
+}
+
+export const metadata = {
+    title: titleGenerator("Tags"),
+    description: "Tags list for msamgan.com",
+    keywords: "msamgan, blog, technical blog, programming, code, tags",
+    openGraph: {
+        type: "article",
+        title: titleGenerator("Tags"),
+        url: "https://msamgan.com/tags",
+        description:
+            "Discover the latest in tech and code at msamgan.com. Stay updated with our curated articles, expert tips, and trendsetting guides designed to inspire and elevate your everyday life.",
+        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+    }
+}
+
+export default async function TagsPage() {
+    const tagList = await getTagList()
 
     return (
         <div>
-            {loading ? (
-                <Loading />
-            ) : (
-                <div className="flex flex-wrap">
-                    <title>{meta.title}</title>
-                    <meta name="description" content={meta.description} />
-
-                    <div className="w-full mb-4">
-                        <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4"}>Tags</h1>
-                        {tagList.map((tag) => (
-                            <span
-                                key={tag.id}
-                                className="inline-block px-4 py-2 mb-2 mr-2 text-sm font-light text-gray-600 bg-gray-100 rounded-full"
-                                style={{ fontSize: `${tag.posts_count * 2 + 12}px` }}
-                            >
+            <div className="flex flex-wrap">
+                <div className="w-full mb-4">
+                    <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4"}>Tags</h1>
+                    {tagList.map((tag) => (
+                        <span
+                            key={tag.id}
+                            className="inline-block px-4 py-2 mb-2 mr-2 text-sm font-light text-gray-600 bg-gray-100 rounded-full"
+                            style={{ fontSize: `${tag.posts_count * 1.2 + 12}px` }}
+                        >
                             <Link href={"/tag/" + tag.slug} className={"hover:text-orange-600"}>
                                 {tag.name} ({tag.posts_count})
                             </Link>
                         </span>
-                        ))}
-                    </div>
+                    ))}
                 </div>
-            )}
+            </div>
         </div>
     )
 }

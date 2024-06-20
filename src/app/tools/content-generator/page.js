@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import { faker } from "@faker-js/faker"
 import { titleGenerator } from "@/methods"
 
-const JsonFormatter = () => {
+const ContentGenerator = () => {
     const [content, setContent] = useState()
     const [notification, setNotification] = useState("")
 
@@ -68,4 +68,4 @@ const JsonFormatter = () => {
     )
 }
 
-export default JsonFormatter
+export default ContentGenerator
