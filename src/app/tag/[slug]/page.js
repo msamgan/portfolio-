@@ -23,8 +23,8 @@ export async function generateMetadata({ params }) {
     }
 }
 
-async function getPostList({ slug }) {
-    const res = await fetch("https://erp.msamgan.com/api/post/tag/" + slug)
+async function getPostList({ slug, query }) {
+    const res = await fetch("https://erp.msamgan.com/api/post/tag/" + slug + "?query=" + query)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
@@ -32,9 +32,11 @@ async function getPostList({ slug }) {
     return res.json()
 }
 
-export default async function Posts(props) {
-    const slug = props.params.slug
-    const postList = await getPostList({ slug })
+export default async function Posts(request) {
+    const slug = request.params.slug
+    const query = request.searchParams.query
+
+    const postList = await getPostList({ slug, query })
 
     return (
         <div className="">
@@ -46,7 +48,7 @@ export default async function Posts(props) {
                     </Link>
                 </span>
             </div>
-            <PostList postList={postList} />
+            <PostList postList={postList} query={query} />
         </div>
     )
 }

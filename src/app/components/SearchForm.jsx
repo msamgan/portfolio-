@@ -32,8 +32,8 @@ export default function SearchForm({ query, count }) {
                         onChange={(e) => setSearch(e.target.value)}
                     />
                     <button
-                        type="button"
-                        title="clear"
+                        type="submit"
+                        title="search"
                         className="absolute p-2 rounded-md inset-y-0 right-0 mr-6 bg-gray-100 flex items-center pr-2"
                     >
                         search
