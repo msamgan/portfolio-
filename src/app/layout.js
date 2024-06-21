@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
                     defer
                     src="https://cloud.umami.is/script.js"
                     data-website-id="5feea10c-6999-43d0-983f-f963a4631506"
+                    data-domains="msamgan.com"
                 ></Script>
             </head>
             <body className={alexandria.className}>
