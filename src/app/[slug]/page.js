@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
 import CommentArea from "@/app/components/CommentArea"
+import FxBanner from "@/app/components/FxBanner"
 
 async function getPost({ slug }) {
     const res = await fetch(`https://msamgan.dev/api/post/${slug}`)
@@ -88,14 +89,14 @@ export default async function PostDetail(props) {
                 </article>
                 <div>
                     {post.tags && (
-                        <div className="flex flex-wrap gap-2 py-3 font-light border-t border-gray-600 border-dashed">
+                        <div className="flex flex-wrap gap-2 pt-3 mb-6 font-light border-t border-gray-600 border-dashed">
                             {post.tags.map((tag, index) => {
                                 return (
                                     <Link
                                         key={index}
                                         href={"/tag/" + tag.slug}
                                         rel="noopener noreferrer"
-                                        className="px-3 py-1 text-gray-500 rounded-sm hover:underline"
+                                        className="text-gray-500 rounded-sm hover:underline mr-3"
                                     >
                                         {tag.name}
                                     </Link>
@@ -103,7 +104,8 @@ export default async function PostDetail(props) {
                             })}
                         </div>
                     )}
-                    <div className="space-y-2">
+                    <FxBanner />
+                    <div className="space-y-2 mt-6">
                         <h4 className="text-lg font-light">Related posts</h4>
                         <ul className="ml-4 space-y-1 font-light list-disc">
                             {post.related_posts &&
