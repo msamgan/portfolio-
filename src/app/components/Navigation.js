@@ -49,15 +49,18 @@ export default function Navigation({ data }) {
 
     return (
         <>
-            <h2 className="text-lg text-gray-400">Navigation</h2>
-            {data.navigation.pages.map((page, index) => {
-                return page.external ? (
-                    <ExternalLink href={page.link} title={page.name} key={index} />
-                ) : (
-                    <NavLink href={page.link} title={page.name} path={path} key={index} />
-                )
-            })}
-            <div className="mt-8 space-y-4">
+            <div className="space-y-4 mb-4">
+                <h2 className="text-lg text-gray-400">Navigation</h2>
+
+                {data.navigation.pages.map((page, index) => {
+                    return page.external ? (
+                        <ExternalLink href={page.link} title={page.name} key={index} />
+                    ) : (
+                        <NavLink href={page.link} title={page.name} path={path} key={index} />
+                    )
+                })}
+            </div>
+            <div className="space-y-4">
                 <h2 className="text-lg text-gray-400">Socials</h2>
                 {data.navigation.social.map((social, index) => {
                     return <ExternalLink href={social.link} title={social.name} key={index} />
