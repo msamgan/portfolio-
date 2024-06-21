@@ -3,7 +3,7 @@ import data from "../data.json"
 
 export const getPosts = async () => {
     return await axios
-        .get("https://erp.msamgan.com/api/post/list")
+        .get("https://msamgan.dev/api/post/list")
         .then((response) => {
             return response.data
         })
@@ -15,7 +15,7 @@ export const getPosts = async () => {
 
 export const getTags = async () => {
     return await axios
-        .get("https://erp.msamgan.com/api/tag/list")
+        .get("https://msamgan.dev/api/tag/list")
         .then((response) => {
             return response.data
         })

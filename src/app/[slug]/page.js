@@ -5,7 +5,7 @@ import { titleGenerator } from "@/methods"
 import CommentArea from "@/app/components/CommentArea"
 
 async function getPost({ slug }) {
-    const res = await fetch(`https://erp.msamgan.com/api/post/${slug}`)
+    const res = await fetch(`https://msamgan.dev/api/post/${slug}`)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
             description: post.excerpt,
             images: post.featured_image
                 ? post.featured_image
-                : "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+                : "https://msamgan.dev/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
         }
     }
 }

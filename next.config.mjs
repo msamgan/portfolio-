@@ -4,9 +4,10 @@ const nextConfig = {
         domains: [
             "frameworkx.info",
             "msamgan.gallerycdn.vsassets.io",
-            "erp.msamgan.com",
+            "msamgan.dev",
             "images.unsplash.com",
-            "secure.gravatar.com"
+            "secure.gravatar.com",
+            "erp.msamgan.com",
         ]
     },
     reactStrictMode: false

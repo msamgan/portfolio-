@@ -53,7 +53,7 @@ export const metadata = {
         title: titleGenerator("Home"),
         url: "https://msamgan.com",
         description: "Welcome to msamgan.com. This is the personal website of Mohammad Samgan Khan.",
-        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+        images: "https://msamgan.dev/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
     }
 }
 

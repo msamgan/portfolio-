@@ -15,12 +15,12 @@ export const metadata = {
         title: titleGenerator("Published Posts"),
         url: "https://msamgan.com/posts",
         description: description,
-        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+        images: "https://msamgan.dev/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
     }
 }
 
 async function getPostList({ query }) {
-    const res = await fetch("https://erp.msamgan.com/api/post/list?query=" + query)
+    const res = await fetch("https://msamgan.dev/api/post/list?query=" + query)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }

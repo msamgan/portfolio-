@@ -2,7 +2,7 @@ import Link from "next/link"
 import { titleGenerator } from "@/methods"
 
 const getTagList = async () => {
-    const res = await fetch("https://erp.msamgan.com/api/tag/list")
+    const res = await fetch("https://msamgan.dev/api/tag/list")
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
@@ -20,7 +20,7 @@ export const metadata = {
         url: "https://msamgan.com/tags",
         description:
             "Discover the latest in tech and code at msamgan.com. Stay updated with our curated articles, expert tips, and trendsetting guides designed to inspire and elevate your everyday life.",
-        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+        images: "https://msamgan.dev/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
     }
 }
 

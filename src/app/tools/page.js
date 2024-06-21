@@ -16,7 +16,7 @@ export const metadata = {
         description: description,
         type: "article",
         url: "https://msamgan.com/tools",
-        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
+        images: "https://msamgan.dev/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png"
     }
 }
 

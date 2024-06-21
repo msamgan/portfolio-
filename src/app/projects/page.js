@@ -27,7 +27,7 @@ export const metadata = {
         title: titleGenerator("Projects"),
         description: description,
         type: "website",
-        images: "https://erp.msamgan.com/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
+        images: "https://msamgan.dev/storage/images/MNn9limQxw66kpBfxjnXQ4jvdndLXom3bh7oeMvc.png",
         url: "https://msamgan.com/projects"
     }
 }
