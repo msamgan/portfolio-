@@ -16,9 +16,9 @@ export default function MobileMenu({ data }) {
             </div>
             <div className="fixed top-0 right-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0">
                 <div className="float-right min-h-full w-[85%] bg-white px-6 pt-12 shadow-2xl">
-                    <menu>
+                    <div>
                         <Navigation data={data} />
-                    </menu>
+                    </div>
                 </div>
             </div>
         </label>
