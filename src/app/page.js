@@ -33,6 +33,7 @@ const FxBanner = () => {
                             rel="noreferrer noopener"
                             target={"_blank"}
                             className="float-end hover:text-orange-700"
+                            data-umami-event={"click to know more about FrameworkX"}
                         >
                             Know More
                         </a>
