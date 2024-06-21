@@ -12,7 +12,7 @@ const FxBanner = () => {
             }}
         >
             <div className="container mx-auto">
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-3">
                     <Image
                         className={"w-42 h-36"}
                         width={200}
