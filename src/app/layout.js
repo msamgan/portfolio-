@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation"
 import Image from "next/image"
 import Loading from "./loading"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import PlausibleProvider from "next-plausible"
+import Script from "next/script"
 
 const alexandria = Alexandria({ subsets: ["latin"] })
 
@@ -20,7 +20,11 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <head>
                 <title></title>
-                <PlausibleProvider domain="msamgan.com" />
+                <Script
+                    defer
+                    src="https://cloud.umami.is/script.js"
+                    data-website-id="5feea10c-6999-43d0-983f-f963a4631506"
+                ></Script>
             </head>
             <body className={alexandria.className}>
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
