@@ -11,16 +11,10 @@ import MobileMenu from "@/app/components/MobileMenu"
 
 const alexandria = Alexandria({ subsets: ["latin"] })
 
-export const metadata = {
-    title: "msamgan.com",
-    description: "Personal portfolio of Mohammed Samgan Khan"
-}
-
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
-                <title></title>
                 <Script
                     defer
                     src="https://cloud.umami.is/script.js"

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
     return {
         title: titleGenerator(post.title),
         description: post.excerpt,
-        keywords: post.tags.map((tag) => tag),
+        keywords: post.tags.map((tag) => tag.name).join(", "),
         alternates: {
             canonical: "https://msamgan.com/" + post.slug
         },
