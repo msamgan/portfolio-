@@ -69,6 +69,28 @@
                 "name": "LinkedIn",
                 "link": "https://www.linkedin.com/in/mohd-samgan-khan/"
             }
+        ],
+        "tags": [
+            {
+                "name": "Laravel",
+                "link": "/tag/laravel"
+            },
+            {
+                "name": "PHP",
+                "link": "/tag/php"
+            },
+            {
+                "name": "How to",
+                "link": "/tag/how-to"
+            },
+            {
+                "name": "CLI",
+                "link": "/tag/cli"
+            },
+            {
+                "name": "MySQL",
+                "link": "/tag/mysql"
+            }
         ]
     },
     "services": [

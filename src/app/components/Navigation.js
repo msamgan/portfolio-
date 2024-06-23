@@ -44,6 +44,14 @@ export const ExternalLink = ({ href, title }) => {
     )
 }
 
+export const InternalLink = ({ href, title }) => {
+    return (
+        <Link href={href} className="block hover:text-orange-600">
+            {title}
+        </Link>
+    )
+}
+
 export default function Navigation({ data }) {
     const path = usePathname()
 
@@ -60,10 +68,16 @@ export default function Navigation({ data }) {
                     )
                 })}
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-4">
                 <h2 className="text-lg text-gray-400">Socials</h2>
                 {data.navigation.social.map((social, index) => {
                     return <ExternalLink href={social.link} title={social.name} key={index} />
+                })}
+            </div>
+            <div className="space-y-4">
+                <h2 className="text-lg text-gray-400">Top Tags</h2>
+                {data.navigation.tags.map((tag, index) => {
+                    return <InternalLink href={tag.link} title={tag.name} key={index} />
                 })}
             </div>
         </>
