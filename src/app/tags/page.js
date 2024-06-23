@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
+import { baseUrl, tagList } from "@/constants"
 
 const getTagList = async () => {
-    const res = await fetch("https://msamgan.dev/api/tag/list")
+    const res = await fetch(baseUrl + tagList)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
@@ -12,7 +13,7 @@ const getTagList = async () => {
 
 export const metadata = {
     title: titleGenerator("Tags"),
-    description: "Tags list for msamgan.com",
+    description: "Tags list for msamgan.com blog",
     keywords: "msamgan, blog, technical blog, programming, code, tags",
     openGraph: {
         type: "article",

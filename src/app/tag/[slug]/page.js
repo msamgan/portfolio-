@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import PostList from "../../components/PostList"
 import { titleGenerator } from "@/methods"
+import { baseUrl } from "@/constants"
 
 const description =
     "Explore msamgan's technical blog featuring insightful programming posts, in-depth code tutorials, and the latest updates in the tech world. based on a tag"
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }) {
 }
 
 async function getPostList({ slug, query }) {
-    const res = await fetch("https://msamgan.dev/api/post/tag/" + slug + "?query=" + query)
+    const res = await fetch(baseUrl + "post/tag/" + slug + "?query=" + query)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }

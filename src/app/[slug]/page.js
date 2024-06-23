@@ -4,9 +4,10 @@ import Link from "next/link"
 import { titleGenerator } from "@/methods"
 import CommentArea from "@/app/components/CommentArea"
 import FxBanner from "@/app/components/FxBanner"
+import { baseUrl } from "@/constants"
 
 async function getPost({ slug }) {
-    const res = await fetch(`https://msamgan.dev/api/post/${slug}`)
+    const res = await fetch(baseUrl + "post/" + slug)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }

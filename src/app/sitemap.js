@@ -1,9 +1,10 @@
 import axios from "axios"
 import data from "../data.json"
+import { baseUrl, postList, tagList } from "@/constants"
 
 export const getPosts = async () => {
     return await axios
-        .get("https://msamgan.dev/api/post/list")
+        .get(baseUrl + postList)
         .then((response) => {
             return response.data
         })
@@ -15,7 +16,7 @@ export const getPosts = async () => {
 
 export const getTags = async () => {
     return await axios
-        .get("https://msamgan.dev/api/tag/list")
+        .get(baseUrl + tagList)
         .then((response) => {
             return response.data
         })

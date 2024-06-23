@@ -1,6 +1,6 @@
 import PostList from "../components/PostList"
 import { titleGenerator } from "@/methods"
-import { NextRequest } from "next/server"
+import { baseUrl, postList } from "@/constants"
 
 const description =
     "Explore msamgan's technical blog featuring insightful programming posts, in-depth code tutorials, and the latest updates in the tech world. Join our community and elevate your coding skills!"
@@ -20,7 +20,7 @@ export const metadata = {
 }
 
 async function getPostList({ query }) {
-    const res = await fetch("https://msamgan.dev/api/post/list?query=" + query)
+    const res = await fetch(baseUrl + postList + "?query=" + query)
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
