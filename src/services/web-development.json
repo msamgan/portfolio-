@@ -1,0 +1,109 @@
+{
+    "name": "Web Development Services",
+    "introduction": [
+        "Web Development is the work involved in developing a website for the Internet or an intranet.",
+        "Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services."
+    ],
+    "image": "",
+    "categories": [
+        {
+            "name": "Custom Portal Development",
+            "description": "Custom portal development is the process of creating a website that acts as a gateway to a variety of information, tools, and resources.",
+            "image": ""
+        },
+        {
+            "name": "Backend Development",
+            "description": "Backend development is the server-side of the application and everything that communicates between the database and the browser.",
+            "image": ""
+        },
+        {
+            "name": "Frontend Development",
+            "description": "Frontend development is the practice of producing HTML, CSS, and JavaScript for a website or Web Application so that a user can see and interact with them directly.",
+            "image": ""
+        },
+        {
+            "name": "Ecommerce Solutions",
+            "description": "E-commerce solutions are the products and services that help a company conduct business electronically.",
+            "image": ""
+        },
+        {
+            "name": "Content Management Systems (CMS)",
+            "description": "A content management system (CMS) is a software application that can be used to manage the creation and modification of digital content.",
+            "image": ""
+        },
+        {
+            "name": "Customer Relationship Management Solutions (CRM)",
+            "description": "Customer relationship management (CRM) is a technology for managing all your company's relationships and interactions with customers and potential customers.",
+            "image": ""
+        }
+    ],
+    "tech_stack": [
+        {
+            "name": "Laravel",
+            "description": "Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern.",
+            "image": ""
+        },
+        {
+            "name": "Node.js",
+            "description": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.",
+            "image": ""
+        },
+        {
+            "name": "Express",
+            "description": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+            "image": ""
+        },
+        {
+            "name": "Ruby on Rails",
+            "description": "Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License.",
+            "image": ""
+        },
+        {
+            "name": "React",
+            "description": "React is a JavaScript library for building user interfaces.",
+            "image": ""
+        },
+        {
+            "name": "Angular",
+            "description": "Angular is a platform and framework for building single-page client applications using HTML and TypeScript.",
+            "image": ""
+        },
+        {
+            "name": "Vue",
+            "description": "Vue.js is a progressive JavaScript framework for building user interfaces.",
+            "image": ""
+        }
+    ],
+    "process": [
+        {
+            "name": "Requirement Gathering",
+            "description": "The first step in the web development process is gathering information. Many things need to be taken into consideration when the look and feel of your site is created.",
+            "image": ""
+        },
+        {
+            "name": "Planning",
+            "description": "Using the information gathered from phase one, it is time to put together a plan for your web site. This is the point where a site map is developed.",
+            "image": ""
+        },
+        {
+            "name": "Design",
+            "description": "Drawing from the information gathered up to this point, it’s time to determine the look and feel of your site.",
+            "image": ""
+        },
+        {
+            "name": "Development",
+            "description": "The developmental stage is the point where the web site itself is created. At this time, your web designer will take all of the individual graphic elements from the prototype and use them to create the actual, functional site.",
+            "image": ""
+        },
+        {
+            "name": "Testing and Deployment",
+            "description": "At this point, your web designer will attend to the final details and test your web site. They will test things such as the complete functionality of forms or other scripts, as well last testing for last minute compatibility issues.",
+            "image": ""
+        },
+        {
+            "name": "Maintenance and Updates",
+            "description": "The development of your web site is not necessarily over, though. One way to bring repeat visitors to your site is to offer new content or products on a regular basis.",
+            "image": ""
+        }
+    ]
+}

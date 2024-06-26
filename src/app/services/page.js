@@ -1,6 +1,7 @@
 import Image from "next/image"
 import data from "../../data.json"
 import { titleGenerator } from "@/methods"
+import Link from "next/link"
 
 const description =
     "Explore msamgan's services and discover how we can help you grow your business. From web development to digital marketing, we offer a wide range of services to meet your needs."
@@ -42,9 +43,9 @@ export default function Services() {
                                     />
                                 </div>
                                 <div className="space-y-3">
-                                    <a rel="noopener noreferrer" href="#" className="block">
+                                    <Link rel="noopener noreferrer" href={service.link} className="block">
                                         <h3 className="text-lg text-bold text-gray-700">{service.name}</h3>
-                                    </a>
+                                    </Link>
                                     <p className="font-light text-gray-700 leading-7">{service.description}</p>
                                 </div>
                             </div>
