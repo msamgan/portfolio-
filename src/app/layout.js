@@ -14,16 +14,17 @@ const alexandria = Alexandria({ subsets: ["latin"] })
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <head>
-                <Script
-                    defer
-                    src="https://cloud.umami.is/script.js"
-                    data-website-id="5feea10c-6999-43d0-983f-f963a4631506"
-                    data-domains="msamgan.com"
-                ></Script>
-            </head>
-            <body className={alexandria.className}>
-                <main className="max-w-screen-lg p-4 mx-auto mt-8">
+        <head>
+            <meta name="google-adsense-account" content="ca-pub-4235318980971035" />
+            <Script
+                defer
+                src="https://cloud.umami.is/script.js"
+                data-website-id="5feea10c-6999-43d0-983f-f963a4631506"
+                data-domains="msamgan.com"
+            ></Script>
+        </head>
+        <body className={alexandria.className}>
+        <main className="max-w-screen-lg p-4 mx-auto mt-8">
                     <header className="flex items-center mb-8 space-x-4">
                         <Image
                             src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"
