@@ -1,20 +1,32 @@
 h2 {
-    @apply text-2xl font-light;
-    margin-bottom: 12px;
+    @apply text-2xl font-semibold;
+    margin-bottom: 22px;
+    margin-top: 22px;
 }
 
 h3 {
-    @apply text-xl font-light;
-    margin-bottom: 12px;
+    @apply text-xl font-semibold;
+    margin-bottom: 22px;
+    margin-top: 22px;
 }
 
 .post p {
     @apply text-lg font-light;
     margin-bottom: 0.6em;
+    @apply leading-7
 }
 
 .post a {
     color: #ea580b;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.post .inline-code {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 .post a:hover {
