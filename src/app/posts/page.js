@@ -23,7 +23,10 @@ export const metadata = {
 async function getPostList({ query, page }) {
     "use server"
 
-    const res = await fetch(baseUrl + postListPaginated + "?page=" + page + "&query=" + query)
+    const res = await fetch(baseUrl + postListPaginated + "?page=" + page + "&query=" + query, {
+        cache: "no-cache"
+    })
+
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
@@ -42,9 +45,7 @@ export default async function Posts(request) {
             return (
                 <Link
                     className={"bg-gray-900 text-white px-4 py-2 rounded-md mt-4"}
-                    href={
-                        "/posts?page=" + (postList.current_page + 1) + "&query=" + query
-                    }
+                    href={"/posts?page=" + (postList.current_page + 1) + "&query=" + query}
                 >
                     Next Page
                 </Link>
@@ -57,9 +58,7 @@ export default async function Posts(request) {
             return (
                 <Link
                     className={"bg-gray-900 text-white px-4 py-2 rounded-md mt-4"}
-                    href={
-                        "/posts?page=" + (postList.current_page - 1) + "&query=" + query
-                    }
+                    href={"/posts?page=" + (postList.current_page - 1) + "&query=" + query}
                 >
                     Previous Page
                 </Link>

@@ -7,7 +7,9 @@ import FxBanner from "@/app/components/FxBanner"
 import { baseUrl } from "@/constants"
 
 async function getPost({ slug }) {
-    const res = await fetch(baseUrl + "post/" + slug)
+    const res = await fetch(baseUrl + "post/" + slug, {
+        cache: 'no-cache',
+    })
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }

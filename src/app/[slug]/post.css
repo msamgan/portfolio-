@@ -13,7 +13,7 @@ h3 {
 .post p {
     @apply text-lg font-light;
     margin-bottom: 0.6em;
-    @apply leading-7
+    @apply leading-7;
 }
 
 .post a {
