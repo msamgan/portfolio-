@@ -9,22 +9,20 @@ export default function PostList({ postList, query, nextPageLink = null, prevPag
                 return (
                     <div key={index} className="text-gray-800 max-w-3xl">
                         <div className="flex flex-col gap-4">
-                            <div className="gap-4 space-y-1">
-                                <Link
-                                    key={index}
-                                    rel="noopener noreferrer"
-                                    href={"/" + post.slug}
-                                    className="block"
-                                >
-                                    <div className="flex flex-row justify-between items-start gap-1">
-                                        <div>
-                                            <h3 className="w-full text-lg text-gray-700 mt-1">{post.title}</h3>
-                                        </div>
-                                        <p className="text-sm font-light text-gray-600 ml-8">
-                                            {new Date(post.published_at).toDateString()}
-                                        </p>
-                                    </div>
-                                </Link>
+                            <Link
+                                key={index}
+                                rel="noopener noreferrer"
+                                href={"/" + post.slug}
+                                className="block"
+                            >
+                                <div>
+                                    <h3 className="w-full font-semibold text-lg text-gray-700 mt-1">
+                                        {post.title}
+                                    </h3>
+                                </div>
+                            </Link>
+                            <div className="text-sm font-light text-gray-600 -mt-4">
+                                {new Date(post.published_at).toDateString()}
                             </div>
                         </div>
                     </div>
