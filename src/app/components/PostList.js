@@ -7,21 +7,19 @@ export default function PostList({ postList, query, nextPageLink = null, prevPag
             <SearchForm query={query} count={postList.length} />
             {postList.map((post, index) => {
                 return (
-                    <div key={index} className="text-gray-800 max-w-3xl">
-                        <div className="flex flex-col gap-4">
+                    <div key={index} className="text-gray-800">
+                        <div className="flex flex-row gap-4 justify-between">
                             <Link
                                 key={index}
                                 rel="noopener noreferrer"
                                 href={"/" + post.slug}
-                                className="block"
+                                className="block w-5/6"
                             >
-                                <div>
-                                    <h3 className="w-full font-semibold text-lg text-gray-700 mt-1">
-                                        {post.title}
-                                    </h3>
-                                </div>
+                                <h3 className="w-full font-semibold text-lg text-gray-700">
+                                    {post.title}
+                                </h3>
                             </Link>
-                            <div className="text-sm font-light text-gray-600 -mt-4">
+                            <div className="text-sm font-light text-gray-600">
                                 {new Date(post.published_at).toDateString()}
                             </div>
                         </div>

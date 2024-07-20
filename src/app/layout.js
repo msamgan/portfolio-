@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
                     <header className="flex items-center mb-8 space-x-4">
                         <Image
-                            src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"
+                            src={data.intro.img}
                             alt={data.name}
                             width={80}
                             height={80}
@@ -50,11 +50,11 @@ export default function RootLayout({ children }) {
                         </div>
                     </header>
 
-                    <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-24 ">
+                    <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-14">
                         <DesktopMenu data={data} />
                         <MobileMenu data={data} />
 
-                        <div fallback={<Loading />}>{children}</div>
+                        <div fallback={<Loading />} className={'w-full'}>{children}</div>
                     </div>
                 </main>
 
