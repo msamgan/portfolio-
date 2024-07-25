@@ -7,7 +7,8 @@ const nextConfig = {
             "msamgan.dev",
             "images.unsplash.com",
             "secure.gravatar.com",
-            "erp.msamgan.com"
+            "erp.msamgan.com",
+            "ms0.org"
         ]
     },
     reactStrictMode: false

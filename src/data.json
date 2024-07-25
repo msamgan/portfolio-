@@ -149,6 +149,13 @@
             "img": "https://msamgan.gallerycdn.vsassets.io/extensions/msamgan/laravel-pint-vscode/0.1.3/1667797465197/Microsoft.VisualStudio.Services.Icons.Default",
             "link": "https://marketplace.visualstudio.com/items?itemName=msamgan.laravel-pint-vscode#review-details",
             "repo": "https://github.com/3rd-planet/vscode-larapint"
+        },
+        {
+            "name": "ms0 Url Shortener",
+            "description": "ms0 is a free URL shortening service that allows you to shorten a long URL into a short one.",
+            "img": "https://ms0.org/ms0_logo.png",
+            "link": "https://ms0.org",
+            "repo": "https://github.com/msamgan/ms0"
         }
     ],
     "tools": [
@@ -181,6 +188,12 @@
             "description": "HTML to Markdown is a free online tool that lets you convert HTML to Markdown with ease.",
             "img": "/HTMLtoMarkdown.png",
             "link": "/tools/html-to-markdown"
+        },
+        {
+            "name" : "Url Shortener",
+            "description": "Url Shortener is a free online tool that lets you shorten a long URL into a short one.",
+            "img": "https://ms0.org/ms0_logo.png",
+            "link": "https://ms0.org"
         }
     ]
 }
