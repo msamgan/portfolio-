@@ -1,11 +1,17 @@
 .post {
     h2 {
-        @apply text-2xl font-semibold;
+        @apply text-3xl font-semibold;
         margin-bottom: 22px;
         margin-top: 22px;
     }
 
     h3 {
+        @apply text-2xl font-semibold;
+        margin-bottom: 22px;
+        margin-top: 22px;
+    }
+
+    h4 {
         @apply text-xl font-semibold;
         margin-bottom: 22px;
         margin-top: 22px;
@@ -131,5 +137,6 @@
         max-width: 100%;
         height: auto;
         margin-bottom: 18px;
+        margin-top: 20px;
     }
 }
