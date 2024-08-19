@@ -2,6 +2,7 @@ import data from "../data.json"
 import Image from "next/image"
 import { titleGenerator } from "@/methods"
 import FxBanner from "@/app/components/FxBanner"
+import Link from "next/link"
 
 export const metadata = {
     title: titleGenerator("Welcome to msamgan.com"),
@@ -21,7 +22,11 @@ export default function Home() {
     return (
         <div className="">
             <Image src={data.intro.img} alt={data.name} width={150} height={150} className="rounded-full" />
-            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4 mt-4"}>{data.name}</h1>
+            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4 mt-4"}>
+                {data.name} ({data.username})
+            </h1>
+            <p className="text-sm text-gray-500">{data.title}</p>
+
             <div className={"mb-6"}>
                 {data.intro.text.map((text, index) => {
                     return (

@@ -3,11 +3,25 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-export const NavLink = ({ href, title, path }) => {
+export const NavLink = ({ href, title, path, data }) => {
     let pathFragment = path.split("/").filter((fragment) => fragment !== "")
     let hrefWithoutSlash = href.slice(1)
 
-    if (pathFragment.includes(hrefWithoutSlash)) {
+    let showActive = pathFragment.includes(hrefWithoutSlash)
+
+    // Check if the current page is the home page
+    let isHome = href === path
+
+    let pagesLinks = data.navigation.pages.map((page) => page.name.toLowerCase())
+    let isPost = pathFragment.length === 1 && !pagesLinks.includes(pathFragment[0])
+    let isTag = pathFragment.length === 2 && pathFragment[0] === "tag"
+
+    // if the current page is a post or tag posts page, make the post-link active
+    if ((isPost || isTag) && hrefWithoutSlash === "posts") {
+        showActive = true
+    }
+
+    if (showActive || isHome) {
         return (
             <div className="flex items-center space-x-2">
                 <svg
@@ -57,25 +71,26 @@ export default function Navigation({ data }) {
 
     return (
         <>
-            <div className="space-y-4 mb-4">
-                <h2 className="text-lg text-gray-400">Navigation</h2>
-
+            <div className="space-y-4">
+                <h2 className="text-lg text-orange-700">Navigation</h2>
                 {data.navigation.pages.map((page, index) => {
                     return page.external ? (
                         <ExternalLink href={page.link} title={page.name} key={index} />
                     ) : (
-                        <NavLink href={page.link} title={page.name} path={path} key={index} />
+                        <NavLink href={page.link} title={page.name} path={path} data={data} key={index} />
                     )
                 })}
             </div>
+
             <div className="space-y-4 mb-4">
-                <h2 className="text-lg text-gray-400">Socials</h2>
+                <h2 className="text-lg text-orange-700">Socials</h2>
                 {data.navigation.social.map((social, index) => {
                     return <ExternalLink href={social.link} title={social.name} key={index} />
                 })}
             </div>
+
             <div className="space-y-4">
-                <h2 className="text-lg text-gray-400">Top Tags</h2>
+                <h2 className="text-lg text-orange-700">Top Tags</h2>
                 {data.navigation.tags.map((tag, index) => {
                     return <InternalLink href={tag.link} title={tag.name} key={index} />
                 })}

@@ -32,29 +32,15 @@ export default function RootLayout({ children }) {
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
             </head>
-            <body className={alexandria.className}>
+            <body className={alexandria.className + " bg-gray-100"}>
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
-                    <header className="flex items-center mb-8 space-x-4">
-                        <Image
-                            src={data.intro.img}
-                            alt={data.name}
-                            width={80}
-                            height={80}
-                            className="w-12 h-12 rounded-full"
-                        />
-                        <div>
-                            <Link href="/">
-                                <div className="text-xl">{data.username}</div>
-                            </Link>
-                            <p className="text-sm text-gray-500">{data.title}</p>
-                        </div>
-                    </header>
-
                     <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-14">
                         <DesktopMenu data={data} />
                         <MobileMenu data={data} />
 
-                        <div fallback={<Loading />} className={'w-full'}>{children}</div>
+                        <div fallback={<Loading />} className={"w-full"}>
+                            {children}
+                        </div>
                     </div>
                 </main>
 

@@ -17,6 +17,11 @@
     "navigation": {
         "pages": [
             {
+                "name": "Home",
+                "link": "/",
+                "external": false
+            },
+            {
                 "name": "Posts",
                 "link": "/posts",
                 "external": false
@@ -190,7 +195,7 @@
             "link": "/tools/html-to-markdown"
         },
         {
-            "name" : "Url Shortener",
+            "name": "Url Shortener",
             "description": "Url Shortener is a free online tool that lets you shorten a long URL into a short one.",
             "img": "https://ms0.org/ms0_logo.png",
             "link": "https://ms0.org"

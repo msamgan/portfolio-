@@ -36,8 +36,11 @@ export default async function TagsPage() {
                     {tagList.map((tag) => (
                         <span
                             key={tag.id}
-                            className="inline-block px-4 py-2 mb-2 mr-2 text-sm font-light text-gray-600 bg-gray-100 rounded-full"
-                            style={{ fontSize: `${tag.posts_count * 1.2 + 12}px` }}
+                            className="inline-block mb-2 mr-2 text-sm font-light text-gray-600 bg-white rounded-full"
+                            style={{
+                                fontSize: `${tag.posts_count * 1.2 + 18}px`,
+                                padding: `${tag.posts_count * 0.5 + 10}px`
+                            }}
                         >
                             <Link href={"/tag/" + tag.slug} className={"hover:text-orange-600"}>
                                 {tag.name} ({tag.posts_count})
