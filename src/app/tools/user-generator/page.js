@@ -78,11 +78,11 @@ const UserGenerator = () => {
                     <small className={"text-gray-400"}>{notification}</small>
                 </div>
                 <div className={"mt-5"}>
-                    <button className={"text-orange-600 font-light py-2 px-4 rounded"} onClick={generateUser}>
+                    <button className={"text-red-600 font-light py-2 px-4 rounded"} onClick={generateUser}>
                         Generate New
                     </button>
                     <a
-                        className={"text-orange-600 font-light py-2 px-4 float-end"}
+                        className={"text-red-600 font-light py-2 px-4 float-end"}
                         href={inboxUrl}
                         target={"_blank"}
                     >

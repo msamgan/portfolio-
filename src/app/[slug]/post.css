@@ -1,12 +1,12 @@
 .post {
     h2 {
-        @apply text-3xl font-semibold;
+        @apply text-3xl font-light;
         margin-bottom: 22px;
         margin-top: 22px;
     }
 
     h3 {
-        @apply text-2xl font-semibold;
+        @apply text-2xl font-light;
         margin-bottom: 22px;
         margin-top: 22px;
     }
@@ -24,7 +24,7 @@
     }
 
     a {
-        color: #ea580b;
+        color: #c94509;
         font-size: 20px;
     }
 
@@ -50,18 +50,20 @@
     pre {
         background: #f4f4f4;
         border: 1px solid #ddd;
-        border-left: 3px solid #f36d33;
+        border-left: 3px solid #FB3020;
         color: black;
         page-break-inside: avoid;
         font-family: monospace;
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 1.6em;
+        margin-top: 1.6em;
         max-width: 100%;
         overflow: auto;
         padding: 1em 1.5em;
         display: block;
         word-wrap: break-word;
+        border-radius: 12px;
     }
 
     blockquote {
@@ -86,7 +88,7 @@
     table tr {
         background-color: #fff;
         border-top: 1px solid #c6cbd1;
-        border-left: 3px solid #f36d33;
+        border-left: 3px solid #FB3020;
     }
 
     table th,
@@ -122,7 +124,7 @@
     }
 
     blockquote {
-        border-left: 3px solid #f36d33;
+        border-left: 3px solid #FB3020;
         background: linear-gradient(45deg, #ffe6db, transparent);
         color: #282828;
         margin-left: 0;

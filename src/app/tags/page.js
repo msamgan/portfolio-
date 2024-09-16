@@ -42,7 +42,7 @@ export default async function TagsPage() {
                                 padding: `${tag.posts_count * 0.5 + 10}px`
                             }}
                         >
-                            <Link href={"/tag/" + tag.slug} className={"hover:text-orange-600"}>
+                            <Link href={"/tag/" + tag.slug} className={"hover:text-red-600"}>
                                 {tag.name} ({tag.posts_count})
                             </Link>
                         </span>

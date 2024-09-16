@@ -76,7 +76,7 @@ const DiffChecker = () => {
                     <a
                         target={"_blank"}
                         rel="noreferrer"
-                        className={"ml-1 text-orange-600 hover:text-orange-700"}
+                        className={"ml-1 text-red-600 hover:text-red-700"}
                         href={"https://github.com/praneshr/react-diff-viewer"}
                     >
                         praneshr

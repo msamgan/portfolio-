@@ -15,7 +15,7 @@ export default function PostList({ postList, query, nextPageLink = null, prevPag
                                 href={"/" + post.slug}
                                 className="block w-5/6"
                             >
-                                <h3 className="w-full font-semibold text-lg text-gray-700">{post.title}</h3>
+                                <h3 className="w-full font-light text-lg text-gray-700">{post.title}</h3>
                             </Link>
                             <div className="text-sm font-light text-gray-600">
                                 {new Date(post.published_at).toDateString()}

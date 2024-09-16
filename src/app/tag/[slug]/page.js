@@ -44,7 +44,7 @@ export default async function Posts(request) {
             <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4"}>Posts with tag: {slug}</h1>
             <div className="flex">
                 <span className="inline-block px-4 py-2 mb-2 mr-2 text-sm font-light text-gray-600 bg-gray-100 rounded-full">
-                    <Link href={"/posts"} className={"hover:text-orange-600"}>
+                    <Link href={"/posts"} className={"hover:text-red-600"}>
                         All Posts
                     </Link>
                 </span>

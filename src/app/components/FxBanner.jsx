@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function FxBanner() {
     return (
         <div
-            className="p-8 text-orange-600 bg-white"
+            className="p-8 text-red-600 bg-white"
             style={{
                 border: "2px solid black",
                 borderRadius: "20px"
@@ -20,7 +20,7 @@ export default function FxBanner() {
                     />
                     <div>
                         <h2 className="text-lg font-light text-center text-gray-700 tracki">
-                            Your Accelerated Path to <span className={"text-orange-600"}>API Creation</span>
+                            Your Accelerated Path to <span className={"text-red-600"}>API Creation</span>
                         </h2>
                         <p className={"text-md text-gray-700 font-light leading-7 mt-3 mb-4"}>
                             I created Framework X to be all about substance over style!. A well-oiled machine
@@ -30,7 +30,7 @@ export default function FxBanner() {
                             href="https://frameworkx.info/docs/introduction"
                             rel="noreferrer noopener"
                             target={"_blank"}
-                            className="float-end hover:text-orange-700"
+                            className="float-end hover:text-red-700"
                             data-umami-event={"click to know more about FrameworkX"}
                         >
                             Know More

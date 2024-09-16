@@ -36,7 +36,7 @@ export const NavLink = ({ href, title, path, data }) => {
                         clipRule="evenodd"
                     />
                 </svg>
-                <Link href={href} className="block text-orange-600">
+                <Link href={href} className="block text-red-600">
                     {title}
                 </Link>
             </div>
@@ -44,7 +44,7 @@ export const NavLink = ({ href, title, path, data }) => {
     }
 
     return (
-        <Link href={href} className="block hover:text-orange-600">
+        <Link href={href} className="block hover:text-red-600">
             {title}
         </Link>
     )
@@ -52,7 +52,7 @@ export const NavLink = ({ href, title, path, data }) => {
 
 export const ExternalLink = ({ href, title }) => {
     return (
-        <a href={href} className="block hover:text-orange-600" target="_blank" rel="noreferrer noopener">
+        <a href={href} className="block hover:text-red-600" target="_blank" rel="noreferrer noopener">
             {title}
         </a>
     )
@@ -60,7 +60,7 @@ export const ExternalLink = ({ href, title }) => {
 
 export const InternalLink = ({ href, title }) => {
     return (
-        <Link href={href} className="block hover:text-orange-600">
+        <Link href={href} className="block hover:text-red-600">
             {title}
         </Link>
     )
@@ -71,30 +71,36 @@ export default function Navigation({ data }) {
 
     return (
         <>
-            <div className="space-y-4">
-                <h2 className="text-lg text-orange-700">Navigation</h2>
-                {data.navigation.pages.map((page, index) => {
-                    return page.external ? (
-                        <ExternalLink href={page.link} title={page.name} key={index} />
-                    ) : (
-                        <NavLink href={page.link} title={page.name} path={path} data={data} key={index} />
-                    )
-                })}
+            <div className="mb-12">
+                {/*<h2 className="text-lg text-gray-500">Navigation</h2>
+                <hr />*/}
+                <div className={"space-y-4 mt-4"}>
+                    {data.navigation.pages.map((page, index) => {
+                        return page.external ? (
+                            <ExternalLink href={page.link} title={page.name} key={index} />
+                        ) : (
+                            <NavLink href={page.link} title={page.name} path={path} data={data} key={index} />
+                        )
+                    })}
+                </div>
             </div>
 
-            <div className="space-y-4 mb-4">
-                <h2 className="text-lg text-orange-700">Socials</h2>
-                {data.navigation.social.map((social, index) => {
-                    return <ExternalLink href={social.link} title={social.name} key={index} />
-                })}
+            <div className="">
+                {/*<h2 className="text-lg text-gray-500">Socials</h2>*/}
+                <hr />
+                <div className={"space-y-4 mt-4"}>
+                    {data.navigation.social.map((social, index) => {
+                        return <ExternalLink href={social.link} title={social.name} key={index} />
+                    })}
+                </div>
             </div>
 
-            <div className="space-y-4">
-                <h2 className="text-lg text-orange-700">Top Tags</h2>
+            {/*<div className="space-y-4">
+                <h2 className="text-lg text-gray-500">Top Tags</h2>
                 {data.navigation.tags.map((tag, index) => {
                     return <InternalLink href={tag.link} title={tag.name} key={index} />
                 })}
-            </div>
+            </div>*/}
         </>
     )
 }

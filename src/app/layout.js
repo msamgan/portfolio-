@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
             </head>
-            <body className={alexandria.className + " bg-gray-100"}>
+            <body className={alexandria.className}>
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
                     <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-14">
                         <DesktopMenu data={data} />

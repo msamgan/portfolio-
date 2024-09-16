@@ -8,7 +8,7 @@ export const ExternalLink = ({ href, title }) => {
             rel="noopener noreferrer"
             href={href}
             target="_blank"
-            className="text-orange-600 hover:text-orange-700"
+            className="text-red-600 hover:text-red-700"
         >
             {title}
         </a>

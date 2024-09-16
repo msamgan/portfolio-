@@ -15,7 +15,7 @@ const ContentGenerator = () => {
             return (
                 <span
                     key={index}
-                    className={"cursor-pointer hover:text-orange-600 font-light leading-7"}
+                    className={"cursor-pointer hover:text-red-600 font-light leading-7"}
                     onClick={() => {
                         navigator.clipboard.writeText(item)
                         setNotification("Sentence copied to clipboard")
@@ -59,7 +59,7 @@ const ContentGenerator = () => {
                 <div className={"mt-3"}>{content}</div>
                 <small className={"text-gray-400 mt-4"}>{notification}</small>
                 <div className={"mt-5"}>
-                    <button className={"text-orange-600 font-light py-2 rounded"} onClick={generateContent}>
+                    <button className={"text-red-600 font-light py-2 rounded"} onClick={generateContent}>
                         Generate New
                     </button>
                 </div>
