@@ -4,12 +4,7 @@ import { titleGenerator } from "@/methods"
 
 export const ExternalLink = ({ href, title }) => {
     return (
-        <a
-            rel="noopener noreferrer"
-            href={href}
-            target="_blank"
-            className="text-red-600 hover:text-red-700"
-        >
+        <a rel="noopener noreferrer" href={href} target="_blank" className="text-red-600 hover:text-red-700">
             {title}
         </a>
     )

@@ -74,7 +74,7 @@ export default function Navigation({ data }) {
             <div className="mb-12">
                 {/*<h2 className="text-lg text-gray-500">Navigation</h2>
                 <hr />*/}
-                <div className={"space-y-4 mt-4"}>
+                <div className={"space-y-4"}>
                     {data.navigation.pages.map((page, index) => {
                         return page.external ? (
                             <ExternalLink href={page.link} title={page.name} key={index} />

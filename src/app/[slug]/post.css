@@ -50,7 +50,7 @@
     pre {
         background: #f4f4f4;
         border: 1px solid #ddd;
-        border-left: 3px solid #FB3020;
+        border-left: 3px solid #fb3020;
         color: black;
         page-break-inside: avoid;
         font-family: monospace;
@@ -88,7 +88,7 @@
     table tr {
         background-color: #fff;
         border-top: 1px solid #c6cbd1;
-        border-left: 3px solid #FB3020;
+        border-left: 3px solid #fb3020;
     }
 
     table th,
@@ -124,7 +124,7 @@
     }
 
     blockquote {
-        border-left: 3px solid #FB3020;
+        border-left: 3px solid #fb3020;
         background: linear-gradient(45deg, #ffe6db, transparent);
         color: #282828;
         margin-left: 0;

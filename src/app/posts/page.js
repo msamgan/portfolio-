@@ -44,7 +44,7 @@ export default async function Posts(request) {
         if (postList.next_page_url) {
             return (
                 <Link
-                    className={"bg-gray-900 text-white px-4 py-2 rounded-md mt-4"}
+                    className={"bg-red-600 text-white px-2 py-1 rounded-lg mt-4"}
                     href={"/posts?page=" + (postList.current_page + 1) + "&query=" + query}
                 >
                     Next Page
@@ -57,7 +57,7 @@ export default async function Posts(request) {
         if (postList.prev_page_url) {
             return (
                 <Link
-                    className={"bg-gray-900 text-white px-4 py-2 rounded-md mt-4"}
+                    className={"bg-red-600 text-white px-2 py-1 rounded-lg mt-4"}
                     href={"/posts?page=" + (postList.current_page - 1) + "&query=" + query}
                 >
                     Previous Page
