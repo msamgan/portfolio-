@@ -5,24 +5,28 @@ export default function PostList({ postList, query, nextPageLink = null, prevPag
     return (
         <>
             <div
-                className="grid grid-cols-1 gap-4 md:grid-cols-1"
-                style={{
-                    minHeight: "48rem"
-                }}
-            >
+                className="grid grid-cols-1 gap-4 md:grid-cols-1">
                 <SearchForm query={query} count={postList.length} />
                 {postList.map((post, index) => {
                     return (
                         <div key={index} className="text-gray-800">
                             <div className="flex flex-row gap-4 justify-between">
-                                <Link
-                                    key={index}
-                                    rel="noopener noreferrer"
-                                    href={"/" + post.slug}
-                                    className="block w-5/6"
-                                >
-                                    <h3 className="w-full font-light text-lg text-gray-700">{post.title}</h3>
-                                </Link>
+                                <h3 className="w-5/6 font-light text-lg text-gray-700 flex-row">
+                                    <Link key={index} rel="noopener noreferrer" href={"/" + post.slug}>
+                                        {post.title}
+                                    </Link>
+                                    <small className="text-sm text-gray-200 space-x-2 ml-2">
+                                        {post.tags.map((tag, index) => {
+                                            return (
+                                                <Link href={"/tag/" + tag.slug} key={index}>
+                                                    <span key={index} className="text-sm text-gray-500">
+                                                        #{tag.name}
+                                                    </span>
+                                                </Link>
+                                            )
+                                        })}
+                                    </small>
+                                </h3>
                                 <div className="text-sm font-light text-gray-600">
                                     {new Date(post.published_at).toDateString()}
                                 </div>
