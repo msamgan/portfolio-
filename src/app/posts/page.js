@@ -2,6 +2,7 @@ import PostList from "../components/PostList"
 import { titleGenerator } from "@/methods"
 import { baseUrl, postListPaginated } from "@/constants"
 import Link from "next/link"
+import PageHeader from "@/app/components/PageHeader"
 
 const description =
     "Explore msamgan's technical blog featuring insightful programming posts, in-depth code tutorials, and the latest updates in the tech world. Join our community and elevate your coding skills!"
@@ -68,7 +69,7 @@ export default async function Posts(request) {
 
     return (
         <>
-            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-2"}>Published Posts</h1>
+            <PageHeader title={"Posts"} />
             <PostList
                 postList={postList.data}
                 query={query}

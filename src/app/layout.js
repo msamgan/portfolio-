@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             </head>
             <body className={alexandria.className}>
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
-                    <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-14">
+                    <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16">
                         <DesktopMenu data={data} />
                         <MobileMenu data={data} />
 

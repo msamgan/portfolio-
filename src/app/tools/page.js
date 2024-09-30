@@ -2,6 +2,7 @@ import Image from "next/image"
 import data from "../../data.json"
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
+import PageHeader from "@/app/components/PageHeader"
 
 const description =
     "A collection of tools to help you with your projects. Find everything you need to streamline your workflow and boost productivity."
@@ -25,7 +26,7 @@ const Tools = () => {
 
     return (
         <div className="">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Tools</h1>
+            <PageHeader title="Tools" />
             <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
                 {/*<div>
                     <fieldset className="w-full text-gray-800 space-y-1">

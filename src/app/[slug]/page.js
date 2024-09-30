@@ -45,7 +45,7 @@ export default async function PostDetail(props) {
     const post = await getPost({ slug })
 
     return (
-        <div className="mx-auto space-y-12 post">
+        <div className="space-y-12 post">
             <>
                 <article className="space-y-8 text-gray-900">
                     <div className="space-y-6">
@@ -53,7 +53,7 @@ export default async function PostDetail(props) {
                             <Image
                                 src={post.featured_image}
                                 alt={post.title}
-                                width={1200}
+                                width={900}
                                 height={100}
                                 style={{
                                     maxHeight: "300px"

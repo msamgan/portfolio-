@@ -1,6 +1,7 @@
 import Image from "next/image"
 import data from "../../data.json"
 import { titleGenerator } from "@/methods"
+import PageHeader from "@/app/components/PageHeader"
 
 export const ExternalLink = ({ href, title }) => {
     return (
@@ -30,7 +31,7 @@ export const metadata = {
 export default function Services() {
     return (
         <div className="">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Projects</h1>
+            <PageHeader title="Projects" />
             <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
                 {data.projects.map((project, index) => {
                     return (

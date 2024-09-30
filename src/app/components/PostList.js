@@ -4,14 +4,13 @@ import SearchForm from "@/app/components/SearchForm"
 export default function PostList({ postList, query, nextPageLink = null, prevPageLink = null }) {
     return (
         <>
-            <div
-                className="grid grid-cols-1 gap-4 md:grid-cols-1">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
                 <SearchForm query={query} count={postList.length} />
                 {postList.map((post, index) => {
                     return (
                         <div key={index} className="text-gray-800">
                             <div className="flex flex-row gap-4 justify-between">
-                                <h3 className="w-5/6 font-light text-lg text-gray-700 flex-row">
+                                <h3 className="w-5/6 font-light text-lg text-gray-700 flex-row hover:text-red-600">
                                     <Link key={index} rel="noopener noreferrer" href={"/" + post.slug}>
                                         {post.title}
                                     </Link>

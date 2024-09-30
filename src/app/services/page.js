@@ -1,6 +1,7 @@
 import Image from "next/image"
 import data from "../../data.json"
 import { titleGenerator } from "@/methods"
+import PageHeader from "@/app/components/PageHeader"
 
 const description =
     "Explore msamgan's services and discover how we can help you grow your business. From web development to digital marketing, we offer a wide range of services to meet your needs."
@@ -24,7 +25,7 @@ export default function Services() {
     return (
         <div className="">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
-                <h1 className={"col-span-2 text-3xl font-bold text-gray-900"}>Services</h1>
+                <PageHeader title="Services" />
                 {data.services.map((service, index) => {
                     return (
                         <div

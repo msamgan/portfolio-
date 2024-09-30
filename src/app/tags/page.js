@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { titleGenerator } from "@/methods"
 import { baseUrl, tagList } from "@/constants"
+import PageHeader from "@/app/components/PageHeader"
 
 const getTagList = async () => {
     const res = await fetch(baseUrl + tagList)
@@ -32,7 +33,7 @@ export default async function TagsPage() {
         <div>
             <div className="flex flex-wrap">
                 <div className="w-full mb-4">
-                    <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4"}>Tags</h1>
+                    <PageHeader title="Tags" />
                     {tagList.map((tag) => (
                         <span
                             key={tag.id}

@@ -3,6 +3,7 @@ import Link from "next/link"
 import PostList from "../../components/PostList"
 import { titleGenerator } from "@/methods"
 import { baseUrl } from "@/constants"
+import PageHeader from "@/app/components/PageHeader"
 
 const description =
     "Explore msamgan's technical blog featuring insightful programming posts, in-depth code tutorials, and the latest updates in the tech world. based on a tag"
@@ -41,7 +42,7 @@ export default async function Posts(request) {
 
     return (
         <div className="">
-            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4"}>Posts with tag: {slug}</h1>
+            <PageHeader title={`Posts with tag: ${slug}`} />
             <div className="flex">
                 <span className="inline-block px-4 py-2 mb-2 mr-2 text-sm font-light text-gray-600 bg-gray-100 rounded-full">
                     <Link href={"/posts"} className={"hover:text-red-600"}>

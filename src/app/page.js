@@ -2,7 +2,6 @@ import data from "../data.json"
 import Image from "next/image"
 import { titleGenerator } from "@/methods"
 import FxBanner from "@/app/components/FxBanner"
-import Link from "next/link"
 
 export const metadata = {
     title: titleGenerator("Welcome to msamgan.com"),

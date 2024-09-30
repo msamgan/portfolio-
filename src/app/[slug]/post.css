@@ -1,4 +1,6 @@
 .post {
+    max-width: 868px;
+
     h2 {
         @apply text-3xl font-light;
         margin-bottom: 22px;
