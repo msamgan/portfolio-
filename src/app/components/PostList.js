@@ -2,7 +2,7 @@ import Link from "next/link"
 import SearchForm from "@/app/components/SearchForm"
 import Pagination from "@/app/components/Pagination"
 
-export default function PostList({ postList, query, paginationData }) {
+export default function PostList({ postList, query, paginationData = null }) {
     return (
         <>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
@@ -41,10 +41,12 @@ export default function PostList({ postList, query, paginationData }) {
                     </div>
                 )}
             </div>
-
-            <div className={"mt-12 float-start"}>
-                <Pagination paginationData={paginationData} query={query} />
-            </div>
+            {
+                paginationData && (<div className={"mt-12 float-start"}>
+                        <Pagination paginationData={paginationData} query={query} />
+                    </div>
+                )
+            }
         </>
     )
 }
