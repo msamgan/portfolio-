@@ -8,6 +8,11 @@ export default function Pagination({ paginationData, query }) {
     const activeButtonClass =
         "inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md bg-gray-50 text-red-600 border-red-600"
 
+    const pageLink = (page, query) => {
+        return "/posts?page=" + page + (query ? "&query=" + query : "")
+    }
+
+
     return (
         <div className="flex justify-center space-x-1 text-gray-800">
             {paginationData.prev_page_url && (
@@ -34,7 +39,7 @@ export default function Pagination({ paginationData, query }) {
             {Array.from({ length: paginationData.last_page }, (_, i) => {
                 return (
                     <Link
-                        href={`/posts?page=${i + 1}` + (query ? `&query=${query}` : "")}
+                        href={pageLink(i + 1, query)}
                         key={i}
                         type="button"
                         className={paginationData.current_page === i + 1 ? activeButtonClass : buttonClass}
