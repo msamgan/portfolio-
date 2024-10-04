@@ -6,7 +6,7 @@ export default function PostList({ postList, query, paginationData = null }) {
     return (
         <>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
-                <SearchForm query={query} count={postList.length} />
+                <SearchForm query={query} count={postList.length} paginationData={paginationData} />
                 {postList.map((post, index) => {
                     return (
                         <div key={index} className="text-gray-800">
@@ -41,12 +41,12 @@ export default function PostList({ postList, query, paginationData = null }) {
                     </div>
                 )}
             </div>
-            {
-                paginationData && (<div className={"mt-12 float-start"}>
-                        <Pagination paginationData={paginationData} query={query} />
-                    </div>
-                )
-            }
+
+            {paginationData && (
+                <div className={"mt-12 float-start"}>
+                    <Pagination paginationData={paginationData} query={query} />
+                </div>
+            )}
         </>
     )
 }

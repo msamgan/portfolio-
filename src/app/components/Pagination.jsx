@@ -12,7 +12,6 @@ export default function Pagination({ paginationData, query }) {
         return "/posts?page=" + page + (query ? "&query=" + query : "")
     }
 
-
     return (
         <div className="flex justify-center space-x-1 text-gray-800">
             {paginationData.prev_page_url && (
