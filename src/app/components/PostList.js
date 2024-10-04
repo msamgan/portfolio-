@@ -1,11 +1,12 @@
 import Link from "next/link"
 import SearchForm from "@/app/components/SearchForm"
+import Pagination from "@/app/components/Pagination"
 
-export default function PostList({ postList, query, nextPageLink = null, prevPageLink = null }) {
+export default function PostList({ postList, query, paginationData = null }) {
     return (
         <>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-1">
-                <SearchForm query={query} count={postList.length} />
+                <SearchForm query={query} count={postList.length} paginationData={paginationData} />
                 {postList.map((post, index) => {
                     return (
                         <div key={index} className="text-gray-800">
@@ -40,10 +41,12 @@ export default function PostList({ postList, query, nextPageLink = null, prevPag
                     </div>
                 )}
             </div>
-            <div className="flex justify-start gap-4">
-                {prevPageLink && prevPageLink()}
-                {nextPageLink && nextPageLink()}
-            </div>
+
+            {paginationData && (
+                <div className={"mt-12 float-start"}>
+                    <Pagination paginationData={paginationData} query={query} />
+                </div>
+            )}
         </>
     )
 }

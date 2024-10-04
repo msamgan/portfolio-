@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export default function SearchForm({ query, count }) {
+export default function SearchForm({ query, count, paginationData = null }) {
     const [search, setSearch] = useState(query)
     return (
         <form>
@@ -34,7 +34,14 @@ export default function SearchForm({ query, count }) {
                         search
                     </button>
                 </div>
-                <small className="block text-xs font-light text-gray-600">showing {count} results</small>
+                {paginationData ? (
+                    <small className="block text-xs font-light text-gray-600">
+                        showing {count} results on page {paginationData.current_page} of{" "}
+                        {paginationData.last_page} from a total of {paginationData.total} results
+                    </small>
+                ) : (
+                    <small className="block text-xs font-light text-gray-600">showing {count} results</small>
+                )}
             </fieldset>
         </form>
     )

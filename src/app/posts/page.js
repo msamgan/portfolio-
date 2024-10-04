@@ -1,7 +1,6 @@
 import PostList from "../components/PostList"
 import { titleGenerator } from "@/methods"
 import { baseUrl, postListPaginated } from "@/constants"
-import Link from "next/link"
 import PageHeader from "@/app/components/PageHeader"
 
 const description =
@@ -41,40 +40,29 @@ export default async function Posts(request) {
 
     const postList = await getPostList({ query, page: page })
 
-    const nextPageLink = () => {
-        if (postList.next_page_url) {
-            return (
-                <Link
-                    className={"bg-red-600 text-white px-2 py-1 rounded-lg mt-4"}
-                    href={"/posts?page=" + (postList.current_page + 1) + "&query=" + query}
-                >
-                    Next Page
-                </Link>
-            )
-        }
-    }
-
-    const prevPageLink = () => {
-        if (postList.prev_page_url) {
-            return (
-                <Link
-                    className={"bg-red-600 text-white px-2 py-1 rounded-lg mt-4"}
-                    href={"/posts?page=" + (postList.current_page - 1) + "&query=" + query}
-                >
-                    Previous Page
-                </Link>
-            )
-        }
+    const pageLink = (page, query) => {
+        return "/posts?page=" + page + (query ? "&query=" + query : "")
     }
 
     return (
         <>
             <PageHeader title={"Posts"} />
+
             <PostList
                 postList={postList.data}
+                paginationData={{
+                    current_page: postList.current_page,
+                    first_page_url: postList.first_page_url ? pageLink(1, query) : null,
+                    last_page_url: postList.last_page_url ? pageLink(postList.last_page, query) : null,
+                    to: postList.to,
+                    from: postList.from,
+                    last_page: postList.last_page,
+                    next_page_url: postList.next_page_url ? pageLink(postList.current_page + 1, query) : null,
+                    prev_page_url: postList.prev_page_url ? pageLink(postList.current_page - 1, query) : null,
+                    per_page: postList.per_page,
+                    total: postList.total
+                }}
                 query={query}
-                nextPageLink={nextPageLink}
-                prevPageLink={prevPageLink}
             />
         </>
     )
