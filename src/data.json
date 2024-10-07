@@ -161,6 +161,13 @@
             "img": "https://ms0.org/ms0_logo.png",
             "link": "https://ms0.org",
             "repo": "https://github.com/msamgan/ms0"
+        },
+        {
+            "name": "laravel environment keys checker",
+            "description": "Check if all the keys are available across all the .env files.",
+            "img": "/laravel.png",
+            "link": "https://github.com/msamgan/laravel-env-keys-checker",
+            "repo": "https://github.com/msamgan/laravel-env-keys-checker"
         }
     ],
     "tools": [
