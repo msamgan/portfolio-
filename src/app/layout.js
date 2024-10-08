@@ -1,13 +1,12 @@
 import { Alexandria } from "next/font/google"
 import "./globals.css"
 import data from "../data.json"
-import Link from "next/link"
-import Image from "next/image"
 import Loading from "./loading"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import DesktopMenu from "@/app/components/DesktopMenu"
 import MobileMenu from "@/app/components/MobileMenu"
+import Image from "next/image"
 
 const alexandria = Alexandria({ subsets: ["latin"] })
 
@@ -33,6 +32,19 @@ export default function RootLayout({ children }) {
                 <meta name="theme-color" content="#ffffff" />
             </head>
             <body className={alexandria.className}>
+                {/*<Image
+                    src="/background.jpeg"
+                    className="absolute inset-0 min-h-screen opacity-25"
+                    style={{
+                        zIndex: -1,
+                    }}
+                    layout="fill"
+                    objectFit="cover"
+                    priority={true}
+                    objectPosition={"center"}
+                    alt={"background"}
+                />*/}
+
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
                     <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16">
                         <DesktopMenu data={data} />
