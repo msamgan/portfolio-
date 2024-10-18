@@ -35,12 +35,12 @@ export default function SearchForm({ query, count, paginationData = null }) {
                     </button>
                 </div>
                 {paginationData ? (
-                    <small className="block text-xs font-light text-gray-600">
+                    <small className="block text-xs font-light text-gray-600 dark:text-white">
                         showing {count} results on page {paginationData.current_page} of{" "}
                         {paginationData.last_page} from a total of {paginationData.total} results
                     </small>
                 ) : (
-                    <small className="block text-xs font-light text-gray-600">showing {count} results</small>
+                    <small className="block text-xs font-light text-gray-600 dark:text-white">showing {count} results</small>
                 )}
             </fieldset>
         </form>

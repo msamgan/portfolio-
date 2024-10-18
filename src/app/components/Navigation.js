@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import ToggleThemeButton from "@/app/components/ToggleThemeButton"
 
 export const NavLink = ({ href, title, path, data }) => {
     let pathFragment = path.split("/").filter((fragment) => fragment !== "")
@@ -28,7 +29,7 @@ export const NavLink = ({ href, title, path, data }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="size-6"
+                    className="size-6 dark:text-white"
                 >
                     <path
                         fillRule="evenodd"
@@ -36,7 +37,7 @@ export const NavLink = ({ href, title, path, data }) => {
                         clipRule="evenodd"
                     />
                 </svg>
-                <Link href={href} className="block text-red-600">
+                <Link href={href} className="block text-red-600 dark:font-bold">
                     {title}
                 </Link>
             </div>
@@ -44,7 +45,7 @@ export const NavLink = ({ href, title, path, data }) => {
     }
 
     return (
-        <Link href={href} className="block hover:text-red-600">
+        <Link href={href} className="block hover:text-red-600 dark:hover:text-red-600 dark:text-white">
             {title}
         </Link>
     )
@@ -52,17 +53,14 @@ export const NavLink = ({ href, title, path, data }) => {
 
 export const ExternalLink = ({ href, title }) => {
     return (
-        <a href={href} className="block hover:text-red-600" target="_blank" rel="noreferrer noopener">
+        <a
+            href={href}
+            className="block hover:text-red-600 dark:hover:text-red-600 dark:text-white"
+            target="_blank"
+            rel="noreferrer noopener"
+        >
             {title}
         </a>
-    )
-}
-
-export const InternalLink = ({ href, title }) => {
-    return (
-        <Link href={href} className="block hover:text-red-600">
-            {title}
-        </Link>
     )
 }
 
@@ -70,10 +68,8 @@ export default function Navigation({ data }) {
     const path = usePathname()
 
     return (
-        <>
-            <div className="mb-12">
-                {/*<h2 className="text-lg text-gray-500">Navigation</h2>
-                <hr />*/}
+        <div className={"space-y-16"}>
+            <div className="">
                 <div className={"space-y-4"}>
                     {data.navigation.pages.map((page, index) => {
                         return page.external ? (
@@ -86,21 +82,18 @@ export default function Navigation({ data }) {
             </div>
 
             <div className="">
-                {/*<h2 className="text-lg text-gray-500">Socials</h2>*/}
-                <hr />
-                <div className={"space-y-4 mt-4"}>
+                <div className={"space-y-4"}>
                     {data.navigation.social.map((social, index) => {
                         return <ExternalLink href={social.link} title={social.name} key={index} />
                     })}
                 </div>
             </div>
 
-            {/*<div className="space-y-4">
-                <h2 className="text-lg text-gray-500">Top Tags</h2>
-                {data.navigation.tags.map((tag, index) => {
-                    return <InternalLink href={tag.link} title={tag.name} key={index} />
-                })}
-            </div>*/}
-        </>
+            <div className={""}>
+                <div className={"mt-8 ml-4"}>
+                    <ToggleThemeButton />
+                </div>
+            </div>
+        </div>
     )
 }
