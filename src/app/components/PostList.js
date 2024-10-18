@@ -11,7 +11,7 @@ export default function PostList({ postList, query, paginationData = null }) {
                     return (
                         <div key={index} className="text-gray-800">
                             <div className="flex flex-row gap-4 justify-between">
-                                <h3 className="w-5/6 font-light text-lg text-gray-700 flex-row hover:text-red-600">
+                                <h3 className="w-5/6 font-light text-lg text-gray-700 flex-row hover:text-red-600 dark:text-white dark:hover:text-red-600">
                                     <Link key={index} rel="noopener noreferrer" href={"/" + post.slug}>
                                         {post.title}
                                     </Link>
@@ -27,7 +27,7 @@ export default function PostList({ postList, query, paginationData = null }) {
                                         })}
                                     </small>
                                 </h3>
-                                <div className="text-sm font-light text-gray-600">
+                                <div className="text-sm font-light text-gray-600 dark:text-white">
                                     {new Date(post.published_at).toDateString()}
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ export default function PostList({ postList, query, paginationData = null }) {
                 })}
 
                 {postList.length === 0 && (
-                    <div className="text-start text-gray-800">
+                    <div className="text-start text-gray-800 dark:text-white">
                         <h1>No posts found</h1>
                     </div>
                 )}

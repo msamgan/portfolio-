@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import DesktopMenu from "@/app/components/DesktopMenu"
 import MobileMenu from "@/app/components/MobileMenu"
-import Image from "next/image"
+import { ThemeProvider } from "next-themes"
 
 const alexandria = Alexandria({ subsets: ["latin"] })
 
@@ -46,17 +46,19 @@ export default function RootLayout({ children }) {
                 />*/}
 
                 <main className="max-w-screen-lg p-4 mx-auto mt-8">
-                    <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16">
-                        <DesktopMenu data={data} />
-                        <MobileMenu data={data} />
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                        <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16">
+                            <DesktopMenu data={data} />
+                            <MobileMenu data={data} />
 
-                        <div fallback={<Loading />} className={"w-full"}>
-                            {children}
+                            <div fallback={<Loading />} className={"w-full"}>
+                                {children}
+                            </div>
                         </div>
-                    </div>
+                    </ThemeProvider>
                 </main>
 
-                <footer className="flex flex-col items-center justify-center py-8 text-gray-500">
+                <footer className="flex flex-col items-center justify-center py-8 text-gray-500 dark:text-white">
                     {/* <Image src="/msamgan_logo.png" alt="msamgan.com" width={300} height={300} /> */}
                     <p className="font-light" style={{ marginTop: "-25px" }}>
                         &copy; {new Date().getFullYear()} {data.username}

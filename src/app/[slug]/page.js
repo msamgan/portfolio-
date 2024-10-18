@@ -61,7 +61,7 @@ export default async function PostDetail(props) {
                                 className="block object-cover object-center rounded-md"
                             />
                         )}
-                        <h1 className="text-4xl leading-7 md:tracking-tight md:text-4xl text-gray-700">
+                        <h1 className="text-4xl leading-7 md:tracking-tight md:text-4xl text-gray-700 dark:text-white">
                             {post.title}
                         </h1>
                         <div className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
@@ -73,13 +73,13 @@ export default async function PostDetail(props) {
                                     height={20}
                                     className="w-4 h-4 bg-gray-500 border border-gray-300 rounded-full"
                                 />
-                                <span className="text-sm">
+                                <span className="text-sm  dark:text-white">
                                     msamgan • {new Date(post.published_at).toDateString()}
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div className="font-light leading-7 text-gray-800">
+                    <div className="font-light leading-7 text-gray-800  dark:text-white">
                         {post.content && (
                             <div
                                 className={"post-content"}

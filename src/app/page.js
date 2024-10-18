@@ -21,15 +21,18 @@ export default function Home() {
     return (
         <div className="">
             <Image src={data.intro.img} alt={data.name} width={150} height={150} className="rounded-full" />
-            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4 mt-4"}>
+            <h1 className={"col-span-2 text-3xl font-bold text-gray-900 mb-4 mt-4 dark:text-white"}>
                 {data.name} ({data.username})
             </h1>
-            <p className="text-sm text-gray-500">{data.title}</p>
+            <p className="text-sm text-gray-500 dark:text-white">{data.title}</p>
 
             <div className={"mb-6"}>
                 {data.intro.text.map((text, index) => {
                     return (
-                        <div className="mt-4 text-lg font-light text-gray-700 leading-7" key={index}>
+                        <div
+                            className="mt-4 text-lg font-light text-gray-700 leading-7 dark:text-white"
+                            key={index}
+                        >
                             {text}
                         </div>
                     )
