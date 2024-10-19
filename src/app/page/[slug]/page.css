@@ -1,5 +1,10 @@
-.post {
+.page {
     max-width: 868px;
+
+    h1 {
+        @apply text-4xl font-light;
+        margin-bottom: 22px;
+    }
 
     h2 {
         @apply text-3xl font-light;
@@ -47,8 +52,9 @@
 
     li {
         list-style: disc;
-        margin-bottom: 0.5em;
         margin-left: 1.5em;
+        @apply text-lg font-light;
+        @apply leading-7;
     }
 
     ul {
@@ -143,10 +149,8 @@
         font-size: 22px;
     }
 
-    .post-content img {
+    img {
         max-width: 100%;
         height: auto;
-        margin-bottom: 18px;
-        margin-top: 20px;
     }
 }

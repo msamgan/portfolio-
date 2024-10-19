@@ -14,7 +14,8 @@ export default function FxBanner() {
                     />
                     <div>
                         <h2 className="text-lg font-light text-center text-gray-700 tracki dark:text-white">
-                            Your Accelerated Path to <span className={"text-red-600 dark:font-bold"}>API Creation</span>
+                            Your Accelerated Path to{" "}
+                            <span className={"text-red-600 dark:font-bold"}>API Creation</span>
                         </h2>
                         <p className={"text-md text-gray-700 font-light leading-7 mt-3 mb-4 dark:text-white"}>
                             I created Framework X to be all about substance over style!. A well-oiled machine
