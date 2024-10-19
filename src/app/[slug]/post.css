@@ -47,7 +47,7 @@
         @apply mb-1 ml-6;
     }
 
-    /*pre {
+    pre {
         @apply text-lg;
         @apply bg-gray-50;
         @apply border-2 border-gray-200 border-l-4 border-l-red-500;
@@ -58,7 +58,7 @@
         @apply pt-2 pb-2 pl-4 pr-4;
         @apply rounded-lg;
         @apply font-extralight;
-    }*/
+    }
 
     table {
         border-collapse: collapse;
