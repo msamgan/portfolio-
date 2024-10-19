@@ -65,8 +65,7 @@ export default async function PostDetail(props) {
                         <h1 className="text-4xl leading-7 md:tracking-tight md:text-4xl text-gray-700 dark:text-white">
                             {post.title}
                         </h1>
-                        <div
-                            className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
+                        <div className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
                             <div className="flex items-center md:space-x-2">
                                 <Image
                                     src="https://secure.gravatar.com/avatar/c2acbea3e046c1b8cf7358d8526eda63?s=80"
@@ -94,8 +93,7 @@ export default async function PostDetail(props) {
                 </article>
                 <div>
                     {post.tags && (
-                        <div
-                            className="flex flex-wrap gap-2 pt-3 mb-6 font-light border-t border-gray-600 border-dashed">
+                        <div className="flex flex-wrap gap-2 pt-3 mb-6 font-light border-t border-gray-600 border-dashed">
                             {post.tags.map((tag, index) => {
                                 return (
                                     <Link

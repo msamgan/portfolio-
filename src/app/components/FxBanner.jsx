@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function FxBanner() {
     return (
-        <div className="p-8 text-red-600 bg-white border-2 border-black rounded-3xl dark:border-white dark:bg-black">
+        <div className="p-8 text-red-600 bg-white border-2 border-black rounded-3xl dark:border-white  dark:bg-gray-800">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-3">
                     <Image

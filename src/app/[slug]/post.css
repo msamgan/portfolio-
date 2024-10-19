@@ -36,7 +36,7 @@
     }
 
     a:hover {
-        @apply text-red-900;
+        @apply text-red-400;
         text-decoration: none !important;
     }
 

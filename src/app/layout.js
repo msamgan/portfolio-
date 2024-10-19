@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
             </head>
-            <body className={alexandria.className}>
+            <body className={alexandria.className + " dark:bg-gray-800"}>
                 {/*<Image
                     src="/background.jpeg"
                     className="absolute inset-0 min-h-screen opacity-25"

@@ -4,9 +4,9 @@ import Link from "next/link"
 
 export default function Pagination({ paginationData, query }) {
     const buttonClass =
-        "inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md bg-gray-50 border-gray-100 dark:border-gray-800 dark:bg-gray-800 text-gray-600 dark:text-white"
+        "inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md bg-gray-50 border-gray-100 dark:border-gray-800 dark:bg-gray-900 text-gray-600 dark:text-white"
     const activeButtonClass =
-        "inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md bg-gray-50 text-red-600 border-red-600 dark:border-red-600 dark:bg-gray-800 dark:text-red-600"
+        "inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md bg-gray-50 text-red-600 border-red-600 dark:border-red-600 dark:bg-gray-900 dark:text-red-600"
 
     const pageLink = (page, query) => {
         return "/posts?page=" + page + (query ? "&query=" + query : "")
