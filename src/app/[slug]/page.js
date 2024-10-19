@@ -20,6 +20,7 @@ async function getPost({ slug }) {
 export async function generateMetadata({ params }) {
     const slug = params.slug
     const post = await getPost({ slug })
+
     return {
         title: titleGenerator(post.title),
         description: post.excerpt,
