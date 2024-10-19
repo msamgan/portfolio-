@@ -5,6 +5,7 @@ import { titleGenerator } from "@/methods"
 import CommentArea from "@/app/components/CommentArea"
 import FxBanner from "@/app/components/FxBanner"
 import { baseUrl } from "@/constants"
+import Content from "@/app/[slug]/Content"
 
 async function getPost({ slug }) {
     const res = await fetch(baseUrl + "post/" + slug, {
@@ -81,14 +82,7 @@ export default async function PostDetail(props) {
                         </div>
                     </div>
                     <div className="font-light leading-7 text-gray-800  dark:text-white">
-                        {post.content && (
-                            <div
-                                className={"post-content"}
-                                dangerouslySetInnerHTML={{
-                                    __html: post.content
-                                }}
-                            ></div>
-                        )}
+                        {post.content && <Content content={post.content} />}
                     </div>
                 </article>
                 <div>
