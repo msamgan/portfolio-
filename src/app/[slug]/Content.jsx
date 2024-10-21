@@ -1,15 +1,15 @@
 "use client"
 
-/*import hljs from "highlight.js"
+import hljs from "highlight.js"
 import "highlight.js/styles/a11y-dark.min.css"
-import { useEffect } from "react"*/
+import { useEffect } from "react"
 
 export default function Content({ content }) {
-    /*useEffect(() => {
+    useEffect(() => {
         document.querySelectorAll("pre code").forEach((block) => {
-            hljs.highlightBlock(block)
+            hljs.highlightElement(block)
         })
-    }, [content])*/
+    }, [content])
 
     return (
         <div

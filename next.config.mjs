@@ -11,7 +11,8 @@ const nextConfig = {
             "ms0.org"
         ]
     },
-    reactStrictMode: false
+    reactStrictMode: false,
+    transpilePackages: ["highlight.js"],
 }
 
 export default nextConfig
