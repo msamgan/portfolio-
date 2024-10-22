@@ -43,5 +43,6 @@ export default function ToggleThemeButton() {
         }
     }, [theme])
 
-    return <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>{icon}</button>
+    return <button id={"toggle-theme-button"} name={"toggle-theme-button"}
+                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>{icon}</button>
 }
