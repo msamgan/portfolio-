@@ -32,27 +32,41 @@ export default function RootLayout({ children }) {
                 <meta name="theme-color" content="#ffffff" />
             </head>
             <body className={alexandria.className + " dark:bg-gray-800"}>
-                {/*<Image
-                    src="/background.jpeg"
-                    className="absolute inset-0 min-h-screen opacity-25"
-                    style={{
-                        zIndex: -1,
-                    }}
-                    layout="fill"
-                    objectFit="cover"
-                    priority={true}
-                    objectPosition={"center"}
-                    alt={"background"}
-                />*/}
-
-                <main className="max-w-screen-lg p-4 mx-auto mt-8">
+                <main className="container w-2/3 p-4 mx-auto mt-8">
                     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                         <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16">
-                            <DesktopMenu data={data} />
-                            <MobileMenu data={data} />
-
-                            <div fallback={<Loading />} className={"w-full"}>
+                            <div>
+                                <DesktopMenu data={data} />
+                                <MobileMenu data={data} />
+                            </div>
+                            <div
+                                fallback={<Loading />}
+                                style={{
+                                    minWidth: "70%"
+                                }}
+                            >
                                 {children}
+                            </div>
+                            <div className="flex flex-col space-y-8">
+                                <a
+                                    href={"https://shop.ashallendesign.co.uk/?aff=WLoAY"}
+                                    target={"_blank"}
+                                    rel={"noopener noreferrer"}
+                                    data-umami-event={"click on laravel api"}
+                                    className={"hover:shadow-lg hover:scale-105"}
+                                >
+                                    <img src="/laravel-api.png" alt="Laravel API" />
+                                </a>
+                                <hr />
+                                <a
+                                    href={"https://shop.ashallendesign.co.uk/?aff=WLoAY"}
+                                    target={"_blank"}
+                                    rel={"noopener noreferrer"}
+                                    data-umami-event={"click on battle ready laravel"}
+                                    className={"hover:shadow-lg hover:scale-105"}
+                                >
+                                    <img src="/battle-ready-laravel.png" alt="Battle Ready Laravel" />
+                                </a>
                             </div>
                         </div>
                     </ThemeProvider>

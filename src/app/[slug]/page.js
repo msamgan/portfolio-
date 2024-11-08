@@ -47,7 +47,7 @@ export default async function PostDetail(props) {
     const post = await getPost({ slug })
 
     return (
-        <div className="space-y-12 post max-w-4xl">
+        <div className="space-y-12 post">
             <>
                 <article className="space-y-8 text-gray-900">
                     <div className="space-y-6">
