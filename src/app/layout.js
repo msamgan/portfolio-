@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
                 <meta name="theme-color" content="#ffffff" />
             </head>
             <body className={alexandria.className + " dark:bg-gray-800"}>
-                <main className="container w-2/3 p-4 mx-auto mt-8">
+                <main className="container lg:w-2/3 p-4 mx-auto mt-8">
                     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                         <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-16">
                             <div>
